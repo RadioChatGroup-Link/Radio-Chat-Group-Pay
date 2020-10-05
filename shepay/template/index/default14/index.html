@@ -1,0 +1,325 @@
+<?php
+$count1=$DB->query("SELECT count(*) from pay_order")->fetchColumn();
+$count2=$DB->query("SELECT count(*) from pay_user")->fetchColumn();
+$data=unserialize(file_get_contents(SYSTEM_ROOT.'db.txt'));
+$mysqlversion=$DB->query("select VERSION()")->fetch();
+?>
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title><?php echo $conf['web_name']?> - 领先的免签约支付平台 - 聚合支付,更安全的支付平台 - www.leleypay.cn</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  	<meta name="keywords" content="<?php echo $conf['web_name']?>-行业领先免签约聚合支付产品，更高效的解决网站支付接口问题，可快速集成到你的网站，实现支付宝,QQ钱包,微信钱包支付,都潮汇,Hack易支付">
+	<meta name="description" content="<?php echo $conf['web_name']?>,彩虹易支付,ABC云支付,hack易支付,免签约支付宝接口,免签约支付宝,微信免签约,财付通免签约,支付宝免签约即时到账,QQ钱包免签约,免签约支付,都潮汇。">
+	<meta content="作者:深海" name="author">
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+  	<link rel="shortcut icon" href="//shepay.ayunx.com/template/index/default14/assets/images/o_1cc652i1r1mmu1qa3deksih19eja.png">
+	<link href="//shepay.ayunx.com/template/index/default14/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//shepay.ayunx.com/template/index/default14/assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//shepay.ayunx.com/template/index/default14/assets/css/animate.min.css" rel="stylesheet">
+	<link href="//shepay.ayunx.com/template/index/default14/assets/css/style.min.css" rel="stylesheet">
+	<link href="//shepay.ayunx.com/template/index/default14/assets/css/style-responsive.min.css" rel="stylesheet">
+	<link href="//shepay.ayunx.com/template/index/default14/assets/css/blue.css" id="theme" rel="stylesheet">
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="//shepay.ayunx.com/template/index/default14/assets/js/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+</head>
+<body data-spy="scroll" data-target="#header-navbar" data-offset="51">
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade">
+        <!-- begin #header -->
+        <div id="header" class="header navbar navbar-transparent navbar-fixed-top">
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin navbar-header -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">
+                        <span class="brand-logo"></span>
+                        <span class="brand-text">
+                            <span class="text-theme"><?php echo $conf['web_name']?></span>
+                        </span>
+                    </a>
+                </div>
+                <!-- end navbar-header -->
+                <!-- begin navbar-collapse -->
+                <div class="collapse navbar-collapse" id="header-navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#home" data-click="scroll-to-target">首页</a> </li>
+                      	<li><a href="#service" data-click="scroll-to-target">优势</a></li>
+                        <li><a href="#team" data-click="scroll-to-target">团队</a></li>
+                        <li><a href="/SDK/">在线测试</a></li>
+                        <li><a href="/doc.php">开发文档</a></li>
+                      	<li><a href="/user/reg.php">商户申请</a></li>
+                        <li><a href="/user">商户登录</a></li>
+                    </ul>
+                </div>
+                <!-- end navbar-collapse -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #header -->
+        
+        <!-- begin #home -->
+        <div id="home" class="content has-bg home">
+            <!-- begin content-bg -->
+            <div class="content-bg">
+                <img src="//shepay.ayunx.com/template/index/default14/assets/images/home-bg.jpg" alt="Home">
+            </div>
+            <!-- end content-bg -->
+            <!-- begin container -->
+            <div class="container home-content">
+                <h1>欢迎来到 <a href="JavaScript:;"><?php echo $conf['web_name']?></a></h1>
+                <h3>每笔交易<?php echo 100-$conf['money_rate']; ?>％费率，结算仅<?php echo $conf['settle_rate']; ?>%手续费！</h3>
+                <h4>
+                    支持多种支付方式：支付宝、QQ钱包、微信、财付通支付，可根据开发文档快速接入自己网站！<br>
+                    <a href="JavaScript:;">稳定、安全、值得信赖</a>
+                </h4>
+                <a href="/user/reg.php" class="btn btn-theme">申请接入</a> <a href="/user" class="btn btn-outline">商户登录</a><br>
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #home -->
+    	
+      	<!-- beign #service -->
+        <div id="service" class="content" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container">
+                <h2 class="content-title">为什么选择我们？</h2>
+                <p class="content-desc">
+                    <?php echo $conf['web_name']?>免去个人站长无法签约支付接口以及企业申请签约支付接口麻烦的问题，免签约也能享受及时到账的乐趣，系统优势如下：
+                </p>
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-3 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-cog"></i></div>
+                            <div class="info">
+                                <h4 class="title">方便接入</h4>
+                                <p class="desc">根据我们提供的开发文档，可快速接入你的网站，让你的网站支持在线支付功能，享受免签约支付的乐趣。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-3 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-paint-brush"></i></div>
+                            <div class="info">
+                                <h4 class="title">低手续费</h4>
+                                <p class="desc">每笔交易费率低至2.5%，每日满10元自动结算，上不封顶，结算手续费最低0.5元，最高20元。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-3 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-file"></i></div>
+                            <div class="info">
+                                <h4 class="title">智能提醒</h4>
+                                <p class="desc"><?php echo $conf['web_name']?>提供商户APP、QQ机器人、邮箱等多种提醒方式可选，让您随时获知自己的收入动态。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-3 -->
+                </div>
+                <!-- end row -->
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-3 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-code"></i></div>
+                            <div class="info">
+                                <h4 class="title">安全放心</h4>
+                                <p class="desc">我们用的支付接口全为自己申请，不存在二次对接的情况，彻底避免对接方跑路导致无法结算的情况！</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-3 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-shopping-cart"></i></div>
+                            <div class="info">
+                                <h4 class="title">自动结算</h4>
+                                <p class="desc">采取T+1结算方式，交易金额满10元，系统会于次日零点开始自动结算，不满10元的可申请手动结算。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-3 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-heart"></i></div>
+                            <div class="info">
+                                <h4 class="title">插件拓展</h4>
+                                <p class="desc">提供SDK测试包，方便快速开发和接入，后续会逐渐提供discuz、WordPress等平台的支付相关插件。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-3 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #service -->
+      
+        <!-- begin #milestone -->
+        <div id="milestone" class="content bg-black-darker has-bg" data-scrollview="true">
+            <!-- begin content-bg -->
+            <div class="content-bg">
+                <img src="//shepay.ayunx.com/template/index/default14/assets/images/milestone-bg.jpg" alt="Milestone">
+            </div>
+            <!-- end content-bg -->
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-3 -->
+                    <div class="col-md-4 col-sm-4 milestone-col">
+                        <div class="milestone">
+                            <div class="number" data-animation="true" data-animation-type="number" data-final-number="<?php echo $count2?>"><?php echo $count2?></div>
+                            <div class="title">接入商户</div>
+                        </div>
+                    </div>
+                    <!-- end col-3 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-4 col-sm-4 milestone-col">
+                        <div class="milestone">
+                            <div class="number" data-animation="true" data-animation-type="number" data-final-number="<?php echo $count1?>"><?php echo $count1?></div>
+                            <div class="title">订单总数</div>
+                        </div>
+                    </div>
+                    <!-- end col-3 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-4 col-sm-4 milestone-col">
+                        <div class="milestone">
+                            <div class="number" data-animation="true" data-animation-type="number" data-final-number="<?php echo $data['usermoney']?>"><?php echo $data['usermoney']?></div>
+                            <div class="title">平台流水</div>
+                        </div>
+                    </div>
+                    <!-- end col-3 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #milestone -->
+        
+        <!-- begin #team -->
+        <div id="team" class="content" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container">
+                <h2 class="content-title">关于我们</h2>
+                <p class="content-desc">
+                    
+                </p>
+				<center>
+                <div class="row">
+				
+                    <div class="col-md-3 col-sm-3">
+                        <div class="team">             
+                            <div class="image" data-animation="true" data-animation-type="flipInX">
+                                <img src="//q4.qlogo.cn/headimg_dl?dst_uin=<?=$conf['web_qq']?>&amp;spec=100" alt="Mia Donovan">
+                            </div>
+                            <div class="info">
+                                <h3 class="name"><?php echo $conf['web_name']?></h3>
+                                <div class="title text-theme">站长</div>
+                                <p>用心，打造极致！</p>
+                                <div class="social">
+                                    <a href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes"><i class="fa fa-qq fa-lg fa-fw"></i></a>
+                                    <a href="JavaScript:;"><i class="fa fa-weibo fa-lg fa-fw"></i></a>
+                                    <a href="JavaScript:;"><i class="fa fa-home fa-lg fa-fw"></i></a>
+                                </div>
+                            </div>                     
+                        </div>
+                    </div>
+                </div>
+				</center>
+				
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #team -->
+      
+        <!-- begin #footer -->
+        <div id="footer" class="footer">
+            <div class="container">
+                <div class="footer-brand">
+                    <div class="footer-brand-logo"></div>
+                    <?php echo $conf['web_name']?>                </div>
+                <p>
+                    Copyright &copy; 2016-<?=date('Y')?> <a href="/" target="_blank"><?php echo $conf['web_name']?></a> 版权所有. <br><?php echo $conf['beian']?><br>
+                </p>
+            </div>
+        </div>
+        <!-- end #footer -->
+        
+        <!-- begin theme-panel -->
+        <div class="theme-panel">
+            <a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
+            <div class="theme-panel-content">
+                <ul class="theme-list clearfix">
+                    <li><a href="javascript:;" class="bg-purple" data-theme="purple" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Purple">&nbsp;</a></li>
+                    <li class="active"><a href="javascript:;" class="bg-blue" data-theme="blue" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Blue">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-green" data-theme="default" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Default">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-orange" data-theme="orange" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Orange">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-red" data-theme="red" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red">&nbsp;</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- end theme-panel -->
+    </div>
+    <!-- end #page-container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="//shepay.ayunx.com/template/index/default14/assets/js/jquery-1.9.1.min.js"></script>
+	<script src="//shepay.ayunx.com/template/index/default14/assets/js/jquery-migrate-1.1.0.min.js"></script>
+	<script src="//shepay.ayunx.com/template/index/default14/assets/js/bootstrap.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="assets/crossbrowser//shepay.ayunx.com/template/index/default14/assets/js/html5shiv.js"></script>
+		<script src="assets/crossbrowser//shepay.ayunx.com/template/index/default14/assets/js/respond.min.js"></script>
+		<script src="assets/crossbrowser//shepay.ayunx.com/template/index/default14/assets/js/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="//shepay.ayunx.com/template/index/default14/assets/js/jquery.cookie.js"></script>
+	<script src="//shepay.ayunx.com/template/index/default14/assets/js/scrollMonitor.js"></script>
+	<script src="//shepay.ayunx.com/template/index/default14/assets/js/apps.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<script>    
+	    $(document).ready(function() {
+	        App.init();
+	    });
+	</script>
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+</body>
+</html>

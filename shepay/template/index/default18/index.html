@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=yes">
+    <link REL="SHORTCUT ICON" HREF="/favicon.ico">
+    <title>
+      <?php echo $conf['web_name']; ?>-领先的免签约支付平台-第三方支付平台,专业的第四方支付聚合支付技术服务商
+    </title>
+    <meta name="keywords" content="<?php echo $conf['web_name']; ?>,都潮汇系统,聚合支付,第四方支付,免签约支付,第三方支付平台">
+    <meta name="description" content="<?php echo $conf['web_name']; ?>是专业的免签收款及代付即时到账服务提供商,成立至今以两年有余!我们支持支付宝、微信、QQ钱包、网银、财付通等主流支付接口。">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default18/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default18/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default18/css/common.css">
+    <link rel="stylesheet" href="//shepay.ayunx.com/template/index/default18/css/animate.min.css">
+    <link rel="stylesheet" href="//shepay.ayunx.com/template/index/default18/css/style.css">
+    <link rel="stylesheet" href="//shepay.ayunx.com/template/index/default18/css/kefu.css">
+    <style>
+      .jyb-banner-box { width: 100%; height: 500px; position: absolute; top:0;
+      opacity:0.7; overflow: hidden; } .jyb-banner-box >.jyb-banner-bg { position:
+      absolute; top: 0; }
+    </style>
+  </head>
+    <body>
+      <header class="header clearfix">
+        <div class="container">
+          <h1 class="pull-left">
+            <a class="header-logo" href="/">
+              <img class="header-logo-img" src="<?php echo $conf['logo_url']?>" alt="<?php echo $conf['web_name']; ?>" />
+            </a>
+          </h1>
+          <nav class="nav pull-right">
+            <ul class="text-center menuul clearfix">
+              <li class="nav-item">
+                <a class="nav-item-a" href="/">
+                  首页
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item-a" href="doc.php">
+                  开发文档
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item-a" href="/SDK/">
+                  在线测试
+                </a>
+              </li>
+              <li class="nav-item log-li">
+                <a class="log-a" href="/user/">
+                  登录
+                </a>
+                <a class="log-b" href="/user/reg.php">
+                  注册
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header-more pull-right" href="javascript:void(0);">
+            <i>
+            </i>
+          </a>
+        </div>
+      </header>
+      <main id="index-page" class="main">
+        <section class="box">
+          <div class="tit flap" data-ani="fadeInDown" data-delay="">
+            <p><?php echo $conf['web_name']; ?></p>
+            <span>
+              提供支付接入方案，可在各种场景中轻松收款
+            </span>
+          </div>
+          <div class="container product-box">
+            <div class="row">
+              <div class="col-md-6 row producttit">
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                  <a href="javascript:;" class="product-item product-item1 flap" data-ani="fadeInUp"
+                  data-delay="">
+                    <i class="product-item-img">
+                    </i>
+                    <h3 class="product-item-tit">
+                      快捷支付
+                    </h3>
+                  </a>
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                  <a href="javascript:;" class="product-item product-item2 flap" data-ani="fadeInUp"
+                  data-delay="">
+                    <i class="product-item-img">
+                    </i>
+                    <h3 class="product-item-tit">
+                      扫码支付
+                    </h3>
+                  </a>
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                  <a href="javascript:;" class="product-item product-item3 flap" data-ani="fadeInUp"
+                  data-delay="">
+                    <i class="product-item-img">
+                    </i>
+                    <h3 class="product-item-tit">
+                      公众号支付
+                    </h3>
+                  </a>
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                  <a href="javascript:;" class="product-item product-item4 flap" data-ani="fadeInUp"
+                  data-delay="">
+                    <i class="product-item-img">
+                    </i>
+                    <h3 class="product-item-tit">
+                      APP支付
+                    </h3>
+                  </a>
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                  <a href="javascript:;" class="product-item product-item5 flap" data-ani="fadeInUp"
+                  data-delay="">
+                    <i class="product-item-img">
+                    </i>
+                    <h3 class="product-item-tit">
+                      小程序支付
+                    </h3>
+                  </a>
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                  <a href="javascript:;" class="product-item product-item6 flap" data-ani="fadeInUp"
+                  data-delay="">
+                    <i class="product-item-img">
+                    </i>
+                    <h3 class="product-item-tit">
+                      H5支付
+                    </h3>
+                  </a>
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                  <a href="javascript:;" class="product-item product-item7 flap" data-ani="fadeInUp"
+                  data-delay="">
+                    <i class="product-item-img">
+                    </i>
+                    <h3 class="product-item-tit">
+                      网关支付
+                    </h3>
+                  </a>
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                  <a href="javascript:;" class="product-item product-item8 flap" data-ani="fadeInUp"
+                  data-delay="">
+                    <i class="product-item-img">
+                    </i>
+                    <h3 class="product-item-tit">
+                      企业收付款
+                    </h3>
+                  </a>
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                  <a href="javascript:;" class="product-item product-item9 flap" data-ani="fadeInUp"
+                  data-delay="">
+                    <i class="product-item-img">
+                    </i>
+                    <h3 class="product-item-tit">
+                      跨境支付
+                    </h3>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 productmsg">
+                <div class="productmsg-item flap" data-ani="fadeInDown" data-delay="">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/item1-a.png" />
+                  <h6>
+                    快捷支付
+                  </h6>
+                  <span>
+                    Quick Pay
+                  </span>
+                  <p>
+                    可跨终端、跨平台、跨浏览器支付；
+                  </p>
+                  <p>
+                    不需开通网银，只需提供银行卡号、户名、手机号码等信息，银行验证手机动态口令，即可完成支付。
+                  </p>
+                </div>
+                <div class="productmsg-item flap" data-ani="fadeInDown" data-delay="0.1s">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/item2-a.png" />
+                  <h6>
+                    扫码支付
+                  </h6>
+                  <span>
+                    Scan To Pay
+                  </span>
+                  <p>
+                    支付宝、微信双渠道接入，双层保障！
+                  </p>
+                  <p>
+                    可以自由选择主动扫码、被动扫码两种方式进行交易。
+                  </p>
+                </div>
+                <div class="productmsg-item flap" data-ani="fadeInDown" data-delay="">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/item3-a.png" />
+                  <h6>
+                    公众号支付
+                  </h6>
+                  <span>
+                    Media Platform Pay
+                  </span>
+                  <p>
+                    基于新媒体时代的支付方式！
+                  </p>
+                  <p>
+                    微信公众号、支付宝服务窗内，唤起主程序完成交易。
+                  </p>
+                </div>
+                <div class="productmsg-item flap" data-ani="fadeInDown" data-delay="">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/item4-a.png" />
+                  <h6>
+                    APP支付
+                  </h6>
+                  <span>
+                    APP Pay
+                  </span>
+                  <p>
+                    手机APP内，只需简单的几行代码，即可接入微信、支付宝、快捷等主流支付方式。
+                  </p>
+                  <p>
+                    用户可以依照自己的习惯选择喜欢的支付方式。
+                  </p>
+                </div>
+                <div class="productmsg-item flap" data-ani="fadeInDown" data-delay="">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/item5-a.png" />
+                  <h6>
+                    小程序支付
+                  </h6>
+                  <span>
+                    Small Program Pay
+                  </span>
+                  <p>
+                    微信小程序应用或商家H5页面
+                  </p>
+                  <p>
+                    在页面内调用主程序JSSDK完成支付。
+                  </p>
+                </div>
+                <div class="productmsg-item flap" data-ani="fadeInDown" data-delay="">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/item6-a.png" />
+                  <h6>
+                    H5支付
+                  </h6>
+                  <span>
+                    H5 Pay
+                  </span>
+                  <p>
+                    不依赖APP、公众号等媒介，普通网页中即可进行交易；
+                  </p>
+                  <p>
+                    几行代码简单接入，快速集成上线。多种主流支付渠道，自适应支付场景，PC端、WAP端、H5页面。
+                  </p>
+                </div>
+                <div class="productmsg-item flap" data-ani="fadeInDown" data-delay="">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/item7-a.png" />
+                  <h6>
+                    网关支付
+                  </h6>
+                  <span>
+                    Gateway Pay
+                  </span>
+                  <p>
+                    2秒支付、60秒支付自动更新
+                  </p>
+                </div>
+                <div class="productmsg-item flap" data-ani="fadeInDown" data-delay="">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/item8-a.png" />
+                  <h6>
+                    企业收付款
+                  </h6>
+                  <span>
+                    Enterprise Collection And Pay
+                  </span>
+                  <p>
+                    企业收款：为企业提供一站式便捷收单产品
+                  </p>
+                  <p>
+                    企业付款：提供单笔或多笔至指定银行的付款服务
+                  </p>
+                </div>
+                <div class="productmsg-item flap" data-ani="fadeInDown" data-delay="">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/item9-a.png" />
+                  <h6>
+                    跨境支付
+                  </h6>
+                  <span>
+                    AS WLCM Pay
+                  </span>
+                  <p>
+                    提供收单、实名认证、报送海关等服务
+                  </p>
+                </div>
+                <div class="productmsg-sitem flap" data-ani="fadeInRight" data-delay="">
+                  <h6>
+                    聚合主流通道，为您提供全方位支付体验
+                  </h6>
+                  <span>
+                    彻底告别繁琐的支付接入流程，一键接入！
+                  </span>
+                  <p>
+                    <?php echo $conf['web_name']; ?>为每一个需要支付服务的企业提供服务和技术支持，帮助企业快速的搭建自己的支付系统。
+                  </p>
+                  <p>
+                    现在如今，支付是商业变现必不可少的环节。我们聚合所有主流支付渠道，给你更简单、快捷的接入体验，同时提供简单易用的管理平台，让你可以集中进行跨渠道的交易管理和财务管理。
+                  </p>
+                  <p>
+                    我们致力于帮助企业快速和高质量地建立支付模块，满足企业任何支付场景的需求！
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="box bg-grey">
+          <div class="ystit tit flap" data-ani="fadeInDown" data-delay="">
+            <p>
+              我们的优势
+            </p>
+            <span>
+              方便快捷的支付接入体验，让支付和收款更简单！
+            </span>
+          </div>
+          <div class="container solution-box">
+            <div class="row">
+              <div class="ysright col-sm-12 col-md-6 col-lg-6 flap" data-ani="fadeInLeft"
+              data-delay="">
+                <dl class="ysldl1">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/icon01.png" />
+                </dl>
+                <dd>
+                  <span>
+                    极简使用
+                  </span>
+                  <p>
+                    七行代码，极速完成，支付接入
+                    <br/>
+                    简洁的操作界面易于使用
+                  </p>
+                </dd>
+              </div>
+              <div class="ysleft col-sm-12 col-md-6 col-lg-6 flap" data-ani="fadeInRight"
+              data-delay="">
+                <dl class="ysrdl1">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/icon02.png" />
+                </dl>
+                <dd>
+                  <span>
+                    灵活便利
+                  </span>
+                  <p>
+                    产品服务灵活组合
+                    <br/>
+                    满足企业多元化业务需求
+                  </p>
+                </dd>
+              </div>
+              <div class="ysright col-sm-12 col-md-6 col-lg-6 flap" data-ani="fadeInLeft"
+              data-delay="">
+                <dl class="ysldl2">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/icon03.png" />
+                </dl>
+                <dd>
+                  <span>
+                    不介入资金流
+                  </span>
+                  <p>
+                    只负责交易处理不参与资金清算
+                    <br/>
+                    保障您的资金安全
+                  </p>
+                </dd>
+              </div>
+              <div class="ysleft col-sm-12 col-md-6 col-lg-6 flap" data-ani="fadeInRight"
+              data-delay="">
+                <dl class="ysrdl2">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/icon04.png" />
+                </dl>
+                <dd>
+                  <span>
+                    大数据
+                  </span>
+                  <p>
+                    运用交易数据分析功能
+                    <br/>
+                    了解公司运营状况
+                  </p>
+                </dd>
+              </div>
+              <div class="ysright col-sm-12 col-md-6 col-lg-6 flap" data-ani="fadeInLeft"
+              data-delay="">
+                <dl class="ysldl1">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/icon05.png" />
+                </dl>
+                <dd>
+                  <span>
+                    增值服务
+                  </span>
+                  <p>
+                    提供金融产品及技术服务
+                    <br/>
+                    帮助企业整合互联网金融
+                  </p>
+                </dd>
+              </div>
+              <div class="ysleft col-sm-12 col-md-6 col-lg-6 flap" data-ani="fadeInRight"
+              data-delay="">
+                <dl class="ysrdl1">
+                  <img src="//shepay.ayunx.com/template/index/default18/images/icon06.png" />
+                </dl>
+                <dd>
+                  <span>
+                    安全稳定
+                  </span>
+                  <p>
+                    系统稳定采用深海
+                    <br/>
+                    多备份容灾保障
+                  </p>
+                </dd>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="box nop-box">
+          <div class="guangdiv">
+            <h6 class="flap" data-ani="fadeInDown" data-delay="">
+              <b>
+                <?php echo $conf['web_name']; ?>
+              </b>
+              ，做您身边的支付服务商
+            </h6>
+            <span class="flap" data-ani="fadeInDown" data-delay="">
+              选择对的服务商能让您更快更好的迈进互联网金融时代
+            </span>
+            <a href="tencent://message/?uin=<?php echo $conf['web_qq']; ?>" target="_blank" class="flap"
+            data-ani="fadeInUp" data-delay="">
+              点击咨询
+            </a>
+          </div>
+        </section>
+        <section class="box case-box">
+          <div class="tit flap" data-ani="fadeInDown" data-delay="">
+            <p>
+              特色与服务
+            </p>
+            <span>
+              高额佣金激励回报，打造支付合作共赢生态圈
+            </span>
+          </div>
+          <div class="container">
+            <ul class="teseul row">
+              <li class="col-lg-2 col-sm-4 col-xs-6 flap" data-ani="fadeInUp" data-delay="">
+                <img src="//shepay.ayunx.com/template/index/default18/images/tes01.png" />
+                <span>
+                  支付能力
+                </span>
+                <p>
+                  让接入支付变的简单方便，随处可得
+                </p>
+              </li>
+              <li class="col-lg-2 col-sm-4 col-xs-6 flap" data-ani="fadeInUp" data-delay="">
+                <img src="//shepay.ayunx.com/template/index/default18/images/tes02.png" />
+                <span>
+                  资源共享
+                </span>
+                <p>
+                  丰富的外部资源提高顾客忠诚度
+                </p>
+              </li>
+              <li class="col-lg-2 col-sm-4 col-xs-6 flap" data-ani="fadeInUp" data-delay="">
+                <img src="//shepay.ayunx.com/template/index/default18/images/tes03.png" />
+                <span>
+                  准确营销
+                </span>
+                <p>
+                  利用支付数据找到有价值的顾客
+                </p>
+              </li>
+              <li class="col-lg-2 col-sm-4 col-xs-6 flap" data-ani="fadeInUp" data-delay="">
+                <img src="//shepay.ayunx.com/template/index/default18/images/tes04.png" />
+                <span>
+                  专业产品
+                </span>
+                <p>
+                  满足商家多样的管理、收银、营销等诉求
+                </p>
+              </li>
+              <li class="col-lg-2 col-sm-4 col-xs-6 flap" data-ani="fadeInUp" data-delay="">
+                <img src="//shepay.ayunx.com/template/index/default18/images/tes05.png" />
+                <span>
+                  技术支持
+                </span>
+                <p>
+                  快速响应，7x24小时为您解答各类技术问题
+                </p>
+              </li>
+              <li class="col-lg-2 col-sm-4 col-xs-6 flap" data-ani="fadeInUp" data-delay="">
+                <img src="//shepay.ayunx.com/template/index/default18/images/tes06.png" />
+                <span>
+                  合作伙伴
+                </span>
+                <p>
+                  高额激励回报，打造合作共赢生态
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="ggchidiv">
+          <span class="flap" data-ani="fadeInDown" data-delay="">
+            我们具有专业的技术团队和丰富的行业资源，旨在帮助企业快速便捷地实现自己的支付功能。
+            <br/>
+            我们以开放云平台的新模式，着力发扬“开放、共建、共享”的理念，提供标准化的支付产品与服务，共享金融大数据资源。
+          </span>
+        </div>
+        <footer class="footer">
+          <div class="container">
+            <div class="row footxxdiv">
+              <div class="col-lg-8 col-xs-12">
+                <dd class="ksdhdd flap" data-ani="fadeInUp" data-delay="">
+                  <dd class="ksdhdd flap" data-ani="fadeInUp" data-delay="">
+                    <b>
+                      舞弊举报监察中心:
+                    </b>
+                    <a class="dwCommonFooter__txt">
+                      举报邮箱：<?php echo $conf['web_mail']; ?>
+                    </a>
+                  </dd>
+                </dd>
+              </div>
+              <div class="col-lg-4 col-xs-12">
+                <dd class="lxfsdd flap" data-ani="fadeInRight" data-delay="0.5s">
+                  <b>
+                    联系方式：
+                  </b>
+                  <br/>
+                  <p>
+                    公司：<?php echo $conf['dizhi']; ?>
+                  </p>
+                  <p>
+                    电话：<?php echo $conf['phone']; ?>
+                  </p>
+                  <p>
+                    网址：<?php echo $_SERVER['SERVER_NAME']?>
+                  </p>
+                  <p>
+                    备案号：<?php echo $conf['beian']; ?>
+                  </p>
+                </dd>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container clearfix">
+              <div class="footer-info pull-right flap" data-ani="fadeInUp" data-delay="0.5s">
+                <div class="footer-login">
+                  <a class="lonin-btn" href="/user/">
+                    登录
+                  </a>
+                  &nbsp;/&nbsp;
+                  <a class="register-btn" href="/user/reg.php">
+                    注册
+                  </a>
+                </div>
+              </div>
+              <div class="pull-left flap" data-ani="fadeInUp" data-delay="0.5s" style="width:auto;">
+                <p>
+                  咨询热线：<?php echo $conf['phone']; ?>
+                </p>
+                <p>
+                  Copyright &copy; 2016-<?=date('Y')?> <?php echo $conf['web_name']?>
+                  <span class="dwCommonFooter__split">
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="//shepay.ayunx.com/template/index/default18/js/jquery.lazyload.js"></script>
+<script src="//shepay.ayunx.com/template/index/default18/js/my.js"></script>
+<script src="//shepay.ayunx.com/template/index/default18/js/three.min.js"></script>
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+<script type="text/javascript">
+
+  //初始化动态
+  //ajax("terraceState",12);
+  //初始化帮助
+  ajax("helpCenter",12);
+  //初始化行业
+  //ajax("industryConsult",12);
+function ajax(type,number){
+  $.ajax({
+    type:'POST',
+    url:'' + '',
+    data:{
+      type:type,
+      num:number,
+    },
+    dataType:"json",
+    success:function(result){
+      var data = result.rows;
+      $.each(data,function(index,obj){
+        if(obj.status==1){
+          $("#"+type+"").append("<li><a class='news-item item diynews' href="+obj.linkurl+"?id="+obj.id+" title="+obj.name+" target='view_window'>"
+          +"<span>"+splitStr(obj.cratetime)+" | </span>"+obj.name+"</a>");
+          $("#"+type+"").append("");
+        }
+      })
+    }
+  });
+}
+function splitStr(data){
+  str=data; //这是一字符串
+  var strs= new Array(); //定义一数组
+  strs=str.split(" "); //字符分割
+  for (i=0;i< strs.length ;i++ )
+  {
+  return(strs[i]); 
+  } 
+}
+
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })    
+</script>
+ <div class="side-contact fontyh hidden-xs" id="side-go-top" style="display: block;">
+<div class="qq-item"> <a target="_blank" href="tencent://message/?uin=<?php echo $conf['web_qq']; ?>"><i>&nbsp;</i> <span>QQ咨询</span></a>
+</div>
+<div class="phone-item"> <i>&nbsp;</i> <span>招商电话</span>
+  <p style="height: 170px !important; display: none;"><em></em>招商电话<br><strong><?php echo $conf['phone']; ?></strong><br>
+    （上午9:00-下午17:30）<br>仅接受商户接入类问题的<br>咨询。其他事宜可联系在<br>线客服</p>
+</div>
+<div class="weixin-item"> <a target="_blank" href="<?php echo $conf['jlqlj']; ?>"><i>&nbsp;</i> <span>QQ群</span></a>
+   
+</div>
+<div class="gotop-item"> <i>&nbsp;</i> <span>返回顶部</span> </div>
+</div>
+
+
+
+<style>
+
+/*客服*/
+.side-contact{position:fixed;right:10px;bottom:126px;display:none;width:70px;height:260px;z-index:200;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.3);background:#f2f2f2;text-align:center}
+.side-contact span,.side-contact i{display:block}
+.side-contact span{font-size:12px;color:#666}
+.side-contact div:hover span{color:#17a1e6}
+.side-contact i{width:35px;height:32px;margin:0 auto}
+.side-contact p{position:absolute;left:0;top:0;display:none;background:#17a1e6;color:#FFF;font-size:14px}
+.side-contact p strong{font-size:22px;font-weight:normal}
+.side-contact p em{position:absolute;right:-11px;display:block;width:11px;height:11px; no-repeat 0 0}
+.side-contact .qq-item{width:100%;height:59px;padding-top:10px;border-bottom:1px solid #f2f2f2;border-radius:8px 8px 0 0;background:#FFF;cursor:pointer}
+.side-contact .qq-item i{background:url(//shepay.ayunx.com/template/index/default18/images/icon_contact.png) no-repeat 0 0}
+.side-contact .qq-item i{background:url(//shepay.ayunx.com/template/index/default18/images/icon_contact.png) no-repeat -32px 0}
+.side-contact .qq-item p{left:-140px;top:0px;width:140px;padding:5px 0;border-radius:8px}
+.side-contact .qq-item p em{top:30px}
+.side-contact .qq-item p a{color:#fff;float:left;border-bottom:#3AABE4 solid 1px;margin:0 20px;width:100px;font-size:14px;padding:12px 0 0 30px;height:52px;text-align:left;background:url(//shepay.ayunx.com/template/index/default18/images/qq.png) no-repeat;background-position:0 10px;}
+.side-contact .qq-item p a:hover{color:#F1F6F9;text-decoration:none;}
+.side-contact .phone-item{width:100%;height:59px;padding-top:10px;border-bottom:1px solid #f2f2f2;background:#FFF;cursor:default}
+.side-contact .phone-item i{background:url(//shepay.ayunx.com/template/index/default18/images/icon_contact.png) no-repeat 2px -32px}
+.side-contact .phone-item i{background:url(//shepay.ayunx.com/template/index/default18/images/icon_contact.png) no-repeat -30px -32px}
+.side-contact .phone-item p{left:-180px;top:70px;width:170px;height:70px;line-height:22px;padding-top:12px;border-radius:8px}
+.side-contact .phone-item p em{top:30px}
+.side-contact .weixin-item{width:100%;height:59px;padding-top:10px;background:#FFF;cursor:default}
+.side-contact .weixin-item i{background:url(//shepay.ayunx.com/template/index/default18/images/icon_contact.png) no-repeat 2px -64px}
+.side-contact .weixin-item i{background:url(//shepay.ayunx.com/template/index/default18/images/icon_contact.png) no-repeat -30px -64px}
+.side-contact .weixin-item p{left:-130px;top:98px;width:120px;height:140px;line-height:22px;padding-top:11px;font-size:14px;border-radius:8px}
+.side-contact .weixin-item p img{width:90px;height:90px;margin-top:10px}
+.side-contact .weixin-item p em{top:72px}
+.side-contact .gotop-item{width:100%;padding-top:10px;cursor:pointer}
+.side-contact .gotop-item i{width:16px;height:16px}
+.side-contact .gotop-item i{background:url(//shepay.ayunx.com/template/index/default18/images/icon_top_arrow.png) no-repeat 0 0}
+.side-contact .gotop-item:hover i{background:url(//shepay.ayunx.com/template/index/default18/images/icon_top_arrow.png) no-repeat -18px 0}
+.side-contact .gotop-item span{padding:3px 0 0 0;color:#999}
+
+</style>
+
+<script type="text/javascript">
+//侧边栏联系我们
+if ($(window).scrollTop()>=0){
+    $("#side-go-top").fadeIn(500);
+}
+$("#side-go-top .gotop-item").click(function(){
+    $('body,html').animate({scrollTop:0},300);
+    return false;
+});
+$(window).scroll(function(){
+    if ($(window).scrollTop()>=0)
+    {
+        $("#side-go-top").fadeIn(500);
+    }
+    else
+    {
+        $("#side-go-top").fadeOut(500);
+    }
+});
+//侧边栏效果
+$('.side-contact .qq-item,.side-contact .phone-item,.side-contact .weixin-item').hover(function(){
+    $(this).find('p').show();
+},function(){
+    $(this).find('p').hide();
+});
+//输入过滤
+//document.getElementById("keyword").onkeypress = function(e){
+//    checkChar(e);
+//}
+//document.getElementById("textarea1").onkeypress = function(e){
+//    checkChar(e);
+//}
+// 
+//function checkChar(e){
+//    e = window.event || e;
+//    var code = e.keyCode || e.which;
+//    var reg = /[\\\/:\*\?"\<\>\|]/;// 禁止 \/:*?"<>|
+//    if(reg.test(String.fromCharCode(code))){
+//        if(window.event){
+//            e.returnValue = false;
+//        }else{
+//            e.preventDefault();
+//        }
+//    }
+//}
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+		<title><?php echo $conf['web_name']?>-都潮汇免签约支付接口,1分钟快速接入支付功能</title>
+<meta name="keywords" content="都潮汇官方,易支付,都潮汇,云支付,免签约及时到账,<?php echo $conf['web_name']?>">
+<meta name="description" content="<?php echo $conf['web_name']?>(都潮汇官方)全网最大易支付平台一站式解决网站签约各种支付接口难题" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="//shepay.ayunx.com/template/index/default15/assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default15/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="//shepay.ayunx.com/template/index/default15/assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="//shepay.ayunx.com/template/index/default15/assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="//shepay.ayunx.com/template/index/default15/assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="/favicon.ico">
+	</head>
+<body class="is-loading">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<section id="main">
+						<header> <span class="avatar"><img src="//q4.qlogo.cn/headimg_dl?dst_uin=<?=$conf['web_qq']?>&amp;spec=100" alt=""></span>
+      <h1><?php echo $conf['web_name']?></h1>
+<p>欢迎使用<?php echo $conf['web_name']?></p>
+      <p><?php echo $conf['web_name']?>一站式免签约支付平台</p>      
+<p><?php echo $conf['web_name']?>每笔交易<?php echo 100-$conf['money_rate']; ?>％费率，结算仅<?php $a=100;$b=$conf['settle_rate'];echo $a*$b?>%手续费！</p>
+      <!---一段可爱的注释：LATEWISH--->
+    </header>
+						
+<footer>
+<ul class="icons">
+<li><a href="/user/login.php" >登陆</a></li>
+<li><a href="/user/reg.php" >注册</a></li>
+<li><a href="<?php echo $conf['qun']?>" >Q群</a></li>
+</ul>
+</footer>
+</section>
+<!-- Footer -->
+  <footer id="footer">
+    <ul class="copyright">
+      <li>©2016-<?=date('Y')?> 版权归<?php echo $conf['web_name']?>所有<br><?php echo $conf['beian']?></li>
+    </ul>
+  </footer>
+</div>
+<!-- Scripts -->
+<!--[if lte IE 8]><script src="http://apps.bdimg.com/libs/respond.//shepay.ayunx.com/template/index/default15/assets/js/1.4.2/respond.min.js"></script><![endif]-->
+<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+</body>
+</html>

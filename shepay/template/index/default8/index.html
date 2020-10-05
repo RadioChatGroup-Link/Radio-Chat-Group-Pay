@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title><?php echo $conf['web_name']?>-国内专业的免签约支付平台-聚合支付系统</title>
+	<meta name="keywords" content="<?php echo $conf['web_name']?>,都潮汇,第四方支付,免签支付,云钱包,云支付,云结算,支付接口,支付营销,对账,微信支付,支付宝,QQ钱包,个人支付接口,免签支付接口" />
+	<meta name="description" content="<?php echo $conf['web_name']?>，解决支付难题，一站式接入支付宝,财付通,QQ钱包,微信wap ,效率高,见效快,费率低让你们更方便管理！" /> 
+	<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default8/css/bootstrap.min.css">
+	<script src="//shepay.ayunx.com/template/index/default8/js/jquery-1.11.2.min.js"></script>
+	<script src="//shepay.ayunx.com/template/index/default8/js/bootstrap.min.js"></script>
+</head>
+<body class="home">
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand navbar-logo" href="#"></a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="/">首页 <span class="sr-only">(current)</span></a></li>
+			<li><a href="/">关于我们</a></li>
+			<li><a href="/doc.php">开发文档</a></li>
+			<li><a href="/SDK">在线测试</a></li>
+			<li class="navbar-nav-login"><a href="/user/reg.php">注册</a></li>
+			<li class="navbar-nav-login"><a href="/user/login.php">登录</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li class="row-wrap">
+	      		<div href="" class="align-self-center row-wrap">
+	      			<a href="/user/reg.php" class="btn btn-success align-self-center">注册</a>
+	      		</div>
+	      	</li>
+			<li class="row-wrap">
+	      		<div href="" class="align-self-center row-wrap">
+	      			<a href="/user/login.php" class="btn btn-success align-self-center">登录</a>
+	      		</div>
+	      	</li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div class="jumbotron" style="background-image: url('//shepay.ayunx.com/template/index/default8/cssimg/banner.png')">
+		<div class="col-xs-10">
+			
+			<div class="subtitle">&nbsp;</div>
+			<div class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		</div>
+	</div>
+	
+	<div class="list-group-item reed"><marquee scrollamount="8" direction="left" align="Middle" style="font-weight: bold;line-height: 20px;font-size: 20px;color: #FF0000;">您遇到问题可以联系我们的官方客服QQ：<?php echo $conf['web_qq']; ?>。感谢您的使用。</marquee></div>
+	<div class="container">
+		<div class="doc-section">
+			<div class="row">
+				<div class="col-xs-12 col-lg-6 col-xs-offset-0 col-lg-offset-3">
+					<div class="title">
+						我们的产品
+					</div>
+					<div class="subtitle">
+						让您在各个场景下轻松实现支付和收款，涵盖扫码支付、POS刷卡、手机APP、移动网页、PC网页、微信公众号等支付，<a href="#">立即体验</a>吧！
+					</div>	
+				</div>
+			</div>	
+			<div class="doc-aside my-brand">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="thumbnail">
+							<img src="//shepay.ayunx.com/template/index/default8/images/iphone6 - white.png" alt="">
+							<div class="caption">移动支付SDK</div>
+							<a href="" class="btn btn-success">了解详情</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="thumbnail">
+							<img src="//shepay.ayunx.com/template/index/default8/images/codedesk.png" alt="">
+							<div class="caption">二维码台卡桌贴</div>
+							<a href="" class="btn btn-success">了解详情</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="thumbnail">
+							<img src="//shepay.ayunx.com/template/index/default8/images/pos.png" alt="">
+							<div class="caption">各类POS产品</div>
+							<a href="" class="btn btn-success">了解详情</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<hr>
+		<div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<div class="thumbnail">
+							<img src="//shepay.ayunx.com/template/index/default8/images/icon1.png" alt="">
+							<div class="caption">资金安全</div>
+							<div class="describe">
+								都潮汇平台只进行交易处理<br> 由各大银行进行资金清算<br> 保障商户的资金安全
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<div class="thumbnail">
+							<img src="//shepay.ayunx.com/template/index/default8/images/icon2.png" alt="">
+							<div class="caption">费率低</div>
+							<div class="describe">
+								新商户立享超值折扣费率<br> 更有大量推广返点优惠活动
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<div class="thumbnail">
+							<img src="//shepay.ayunx.com/template/index/default8/images/icon3.png" alt="">
+							<div class="caption">账期短</div>
+							<div class="describe">
+								商户可享T+1结算周期<br> 深度合作商户可申请更短账期
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<div class="thumbnail">
+							<img src="//shepay.ayunx.com/template/index/default8/images/icon4.png" alt="">
+							<div class="caption">通道稳定</div>
+							<div class="describe">
+								数据传输和存储多重加密<br> 两地三中心容灾系统<br>确保服务稳定 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="doc-section">
+			<div class="doc-aside row-wrap">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 align-self-center">
+						<div class="align-left">
+							<div class="doc-h2">企业定制化方案</div>
+							<div class="doc-h3">为集团化企业提供定制化方案，解决企业资金流集中管控困难、信息流管控力度差以及由此引发的管理成本居高不下、不利于决策及IPO等问题，最终实现资金流和现金流的统一管控，提高集团经营效率、节省成本。</div>							
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-lg-offset-2 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 align-self-center">
+						<div class="image-box">
+							<img width="100%" src="//shepay.ayunx.com/template/index/default8/images/business.png" alt="" class="img-home-EC">
+						</div>		
+					</div>			
+				<div class="row row-wrap">
+
+				</div>				
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="doc-section" >
+				<div class="caption">专业服务</div>
+				<div class="doc-aside">
+					<div class="ps-list thumbnail-group" animate="true">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 inherit">
+								<div class="ps-list-item data-query-service thumbnail-item">
+									<img src="//shepay.ayunx.com/template/index/default8/images/servicon_1_1.png" normal-url="//shepay.ayunx.com/template/index/default8/images/servicon_1_1.png" active-url="//shepay.ayunx.com/template/index/default8/images/servicon_1_1.png">
+									<div class="caption">数据查询与分析服务</div>
+									<div class="describe">
+										提供全渠道的商户管理平台及查询APP，快速浏览当日的交易状况。可以集中进行跨渠道的交易管理，查账对账，数据分析，输出报表等
+									</div>
+									<span class="bg"></span>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 inherit">
+								<div class="ps-list-item register-service thumbnail-item">
+									<img src="//shepay.ayunx.com/template/index/default8/images/servicon_2_1.png" alt="" normal-url="//shepay.ayunx.com/template/index/default8/images/servicon_2_1.png" active-url="//shepay.ayunx.com/template/index/default8/images/servicon_2_1.png">
+									<div class="caption">免费代申请服务</div>
+									<div class="describe">
+										各类支付渠道代申请、技术对接、交易管理、数据分析等都有专业人员为您提供一对一服务<br>&nbsp;
+									</div>
+									<span class="bg"></span>
+								</div>
+							</div>		
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 inherit">
+								<div class="ps-list-item customer-service thumbnail-item">
+									<img src="//shepay.ayunx.com/template/index/default8/images/servicon_3_1.png" alt="" normal-url="//shepay.ayunx.com/template/index/default8/images/servicon_3_1.png" active-url="//shepay.ayunx.com/template/index/default8/images/servicon_3_1.png">
+									<div class="caption">专业客服</div>
+									<div class="describe">
+										提供7*24专业客服服务,及时响应您的需求，随时为您解答疑问<br>&nbsp;
+									</div>
+									<span class="bg"></span>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 inherit">
+								<div class="ps-list-item pack-service thumbnail-item">
+									<img src="//shepay.ayunx.com/template/index/default8/images/servicon_4_1.png" alt="" normal-url="//shepay.ayunx.com/template/index/default8/images/servicon_4_1.png" active-url="//shepay.ayunx.com/template/index/default8/images/servicon_4_1.png">
+									<div class="caption">产品物料打包服务</div>
+									<div class="describe">
+										根据商户的需求，提供打包的POS机、台卡、桌贴、说明书等产品物料，并可定制个性化扫码物料，如卡片、贴纸等
+									</div>
+									<span class="bg"></span>
+								</div>
+							</div>						
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="doc-section">
+				<div class="caption">合作流程</div>
+				<div class="doc-aside">
+					<table class="process-line" width="100%">
+						<tr>
+							<td width="20%">
+								<div class="image-box">
+									<img class="img-home-PI animate rotate-2D" src="//shepay.ayunx.com/template/index/default8/images/icon1_1.png" alt="">
+								</div>
+							</td>
+							<td width="7%">
+								<div class="image-box">
+									<img class="img-home-PA" src="//shepay.ayunx.com/template/index/default8/images/arrow.png" alt="">
+								</div>
+							</td>
+							<td width="20%">
+								<div class="image-box">
+									<img class="img-home-PI animate rotate-2D" src="//shepay.ayunx.com/template/index/default8/images/icon2_1.png" alt="">
+								</div>
+							</td>
+							<td width="7%">
+								<div class="image-box">
+									<img class="img-home-PA" src="//shepay.ayunx.com/template/index/default8/images/arrow.png" alt="">
+								</div>
+							</td>
+							<td width="20%">
+								<div class="image-box">
+									<img class="img-home-PI animate rotate-2D" src="//shepay.ayunx.com/template/index/default8/images/icon3_1.png" alt="">
+								</div>
+							</td>
+							<td width="7%">
+								<div class="image-box">
+									<img class="img-home-PA" src="//shepay.ayunx.com/template/index/default8/images/arrow.png" alt="">
+								</div>
+							</td>
+							<td width="20%">
+								<div class="image-box">
+									<img class="img-home-PI animate rotate-2D" src="//shepay.ayunx.com/template/index/default8/images/icon4_1.png" alt="">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><div class="caption">确定合作模式</div></td>
+							<td></td>
+							<td><div class="caption">提供资料审核</div></td>
+							<td></td>
+							<td><div class="caption">联调</div></td>
+							<td></td>
+							<td><div class="caption">上线</div></td>
+						</tr>						
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="doc-section">
+			<div class="caption">合作伙伴</div>
+			<div class="doc-aside">
+				<div class="row cooprate-list">
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate1_1.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate1_2.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate1_3.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate1_4.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate1_5.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate1_6.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate2_1.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate2_2.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate2_3.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate2_4.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate2_5.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate2_6.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate3_1.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate3_2.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate3_3.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate3_4.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate3_5.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate3_6.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate4_1.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate4_2.jpg" alt="">
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<img class="img-COOP" src="//shepay.ayunx.com/template/index/default8/images/cooprate4_3.jpg" alt="">
+					</div>
+				</div>					
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="footer footer2">
+		<div class="container">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-self-center">
+				<p>Copyright © 2016-<?=date('Y')?> <?php echo $conf['web_name']?>  | Powered by <a href="http://auth.ooeecc.cn/">都潮汇系统</a></p>
+				<p>IDC备案：<?php echo $conf['beian']?></p>
+				<p>友情链接：<a href="http://www.ayun.host/">时间云</a></p>				
+			</div>
+		</div>
+	</footer>    
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+	<head>
+		<title>
+			<?php echo $conf['web_name']?> - 会支付会生活
+		</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="<?php echo $conf['web_name']?>" />
+		<meta name="description" content="<?php echo $conf['web_name']?>" />
+		<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default10/css/style.css">
+		<style>
+			h4 span{font-size:0.9em;margin-left:5px;color:#999;font-weight:400;}.site-footer-credits
+			a{color:#819198;}div{margin-bottom:30px;}.highlighter-rouge{margin-bottom:20px;}
+		</style>
+	</head>
+	<body>
+		<section class="page-header">
+			<h1 class="project-name" style="text-transform: uppercase;">
+				<?php echo $conf['web_name']?> - <?php echo $_SERVER['SERVER_NAME']?>
+			</h1>
+			<h2 class="project-tagline">
+				每笔交易<?php echo 100-$conf['money_rate']; ?>％费率，结算仅<?php $a=100;$b=$conf['settle_rate'];echo $a*$b?>%手续费！三网长期稳定H5，支持支付同行对接
+			</h2>
+			<a href="/user/reg.php" class="btn">
+				商户注册
+			</a>
+			<a href="/user/" class="btn">
+				用户中心
+			</a>
+			<a href="doc.php" target="_blank" class="btn">
+				开发文档
+			</a>
+		</section>
+		<section class="main-content">
+			<div>
+				<h1>
+					<a href="#header-1">
+					</a>
+					平台简介
+				</h1>
+				<div>
+					<p>
+						通道接口API：<?php echo $_SERVER['SERVER_NAME']?>
+						<br/>
+						结算通知群：<?php echo $conf['jlqh']; ?>
+						<br/>
+						客服QQ：<?php echo $conf['web_qq']; ?>
+						<br/>
+						联系邮箱：<?php echo $conf['web_mail']; ?>
+						<br/>
+					</p>
+				</div>
+			</div>
+			<div>
+				<h2>
+					<a href="#header-3">
+					</a>
+					关于违规商品-请各站长务必看
+				</h2>
+				<div>
+					<p>
+						----王者荣耀相关
+						<br/>
+						NO.1-CDK兑换，-打着必中的
+						<br/>
+						NO.2-必中皮肤之内的东西
+						<br/>
+						NO.3-夸张卖商品的
+						<br/>
+						----以上任何商品，发现直接封禁-轻则付款，重则直接不给于结算。
+						<br/>
+						<br/>
+						----CF相关商品
+						<br/>
+						NO.1-任何必中英雄武器的
+						<br/>
+						NO.2-任何夸张卖商品的
+						<br/>
+						----以上任何商品，发现直接封禁-轻则付款，重则直接不给于结算。
+						<br/>
+						<br/>
+						上架任何不能到账或者虚假商品，一律罚款商品价格20倍；
+						<br/>
+						严重的封禁商户；
+						<br/>
+						其它任何涉及-诈骗-黄-毒-赌-辅助-外挂的任何商品-只要涉及，一律封禁，不结算。
+						<br/>
+						不要带有侥幸心理，查到我们是不听任何解释。
+						<br/>
+						涉嫌金额较大，我们无法处理的报备当地运营警方。
+						<br/>
+					</p>
+				</div>
+			</div>
+			<div><h2><a href="#header-5"></a><?php echo $conf['web_name']?></h2><div><p>人生苦短迟早如意<br/><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><strong><code>你不对接我，还能对接谁呢？我就是你的首选支付提供商~</code></strong></pre></div></div><hr/></div></div>
+			<span class="site-footer-owner">
+				All rights reserved .
+			</span>
+			<span class="site-footer-credits">
+				<small>
+					<a href="/" target="_blank">
+						<?php echo $conf['web_name']?>提供技术支持
+					</a>
+					.
+				</small>
+			</span>
+			</footer>
+		</section>
+		<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+	</body>
+</html>

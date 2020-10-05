@@ -1,0 +1,346 @@
+<?php
+$count1=$DB->query("SELECT count(*) from pay_order")->fetchColumn();
+$count2=$DB->query("SELECT count(*) from pay_user")->fetchColumn();
+$data=unserialize(file_get_contents(SYSTEM_ROOT.'db.txt'));
+$mysqlversion=$DB->query("select VERSION()")->fetch();
+?>
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<title><?php echo $conf['web_name']?> - 会支付会生活 - 中国领先的第三方支付</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="description" content="<?php echo $conf['web_name']?> by m6e6.cn" />
+	<meta name="keywords" content="<?php echo $conf['web_name']?>,云钱包,云支付,云结算,支付接口,支付营销,对账,微信支付,支付宝,QQ钱包,个人支付接口,免签支付接口" />
+	<meta name="author" content="m6e6.cn" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default17/assets/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default17/assets/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default17/assets/css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default17/assets/css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default17/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default17/assets/css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default17/assets/css/style.css">
+	<!-- Modernizr JS -->
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+	<body>
+	<div class="gtco-loader"></div>
+	<div id="page">
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="gtco-logo"><img src="<?php echo $conf['logo_url']?>" alt="DeepSea." title="<?php echo $conf['web_name']?>LOGO" height="40px" width="130px"></div>
+				</div>
+				<div class="col-xs-8 text-center menu-1">
+					<ul>
+						<li class="active"><a href="/">首页</a></li>
+						<li><a href="doc.php">开发文档</a></li>
+						<li><a href="/SDK">在线测试</a></li>
+						<li><a href="/user/reg.php">商户申请</a></li>
+						<li><a onclick="return confirm('有事直奔主题，ok？')" href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes">联系客服</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-2 text-right hidden-xs menu-2">
+					<ul>
+						<li class="btn-cta"><a href="/user/login.php"><span>用户登录</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(//shepay.ayunx.com/template/index/default17/assets/images/img_bg_1.jpg);">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1><?php echo $conf['web_name']?></h1>
+							<h2>会支付会生活 - 中国领先的第三方支付 <a href="/" target="_blank"><?php echo $conf['local_domain']?></a></h2>
+							<p><a href="/user/" class="btn btn-default">开始征途</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="gtco-features">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-credit"></i>
+						</span>
+						<h3>云支付</h3>
+						<p>支持支付宝、微信、QQ钱包等主流支付渠道，让您拥有PC网页支付、扫码支付、移动HTML5支付。</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-wallet"></i>
+						</span>
+						<h3>云钱包</h3>
+						<p>您的企业网站可以通过<?php echo $conf['web_name']?>为用户提供统一虚拟账户，提升用户支付体验，为拓展增值服务提供基础。</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-credit-card"></i>
+						</span>
+						<h3>云结算</h3>
+						<p><?php echo $conf['web_name']?>通过简单的页面配置，可以替代复杂繁琐的人工资金结算业务，提高业务实时性，降低错误。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="gtco-features-2">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2>为什么选择我们？</h2>
+					<p>我们的优势：长期稳定支付通道、方便快捷账号管理、高效实时监控订单、敏感信息安全保证、T+1结算机制、客服高效服务</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+						<span class="icon">
+							<i class="icon-check"></i>
+						</span>
+						<div class="feature-copy">
+							<h3>多种方式结算</h3>
+							<p>资金安全有保障-实时查询，安全可靠，多重账号保护措施安全可靠：维护商户利益，7*24小时全天候服务。实时查询，安全可靠，多重账号保护措施安全可靠； 维护商户利益。</p>
+						</div>
+					</div>
+
+					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+						<span class="icon">
+							<i class="icon-check"></i>
+						</span>
+						<div class="feature-copy">
+							<h3>资金回笼</h3>
+							<p>一次轻松接入所有支付（QQ钱包，支付宝，微信），省时省心省力， 结算费率低，利润高！对接费率超低，比其它平台更便宜.全天监视订单 和资金安全，正规支付接口！</p>
+						</div>
+					</div>
+
+					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+						<span class="icon">
+							<i class="icon-check"></i>
+						</span>
+						<div class="feature-copy">
+							<h3>高效服务</h3>
+							<p>我们提供7X24小时在线服务，对日交易高额用户提供贵宾服务！用最具影响力品牌协助，并全力协助新兴品牌，我们以设计助力众多品牌走向行业领先地位，鼎力相助每一个梦想。</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="gtco-video gtco-bg" style="background-image: url(//shepay.ayunx.com/template/index/default17/assets/images/img_1.jpg); ">
+						<a href="https://player.youku.com/embed/XMjgwMDg0MzY0MA" class="popup-vimeo"><i class="icon-video2"></i></a>
+						<div class="overlay"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="gtco-counter" class="gtco-bg gtco-counter" style="background-image:url(//shepay.ayunx.com/template/index/default17/assets/images/img_bg_2.jpg);">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-3 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<i class="icon-users"></i>
+								</span>
+								<span class="counter js-counter" data-from="0" data-to="<?php echo $count2?>" data-speed="5000" data-refresh-interval="50">1</span>
+								<span class="counter-label">商户数量</span>
+
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<i class="icon-google-drive"></i>
+								</span>
+								<span class="counter js-counter" data-from="0" data-to="<?php echo $count1?>" data-speed="5000" data-refresh-interval="50">1</span>
+								<span class="counter-label">订单总数</span>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<i class="icon-cloud-download"></i>
+								</span>
+								<span class="counter js-counter" data-from="0" data-to="<?php echo $data['settlemoney']?>" data-speed="5000" data-refresh-interval="50">1</span>
+								<span class="counter-label">结算金额</span>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<i class="icon-credit"></i>
+								</span>
+								<span class="counter js-counter" data-from="0" data-to="<?php echo $data['usermoney']?>" data-speed="5000" data-refresh-interval="50">1</span>
+								<span class="counter-label">总计金额</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="gtco-testimonial">
+		<div class="gtco-container">
+			<!-- <div class="row"> -->
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2>展望未来</h2>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="owl-carousel owl-carousel-fullwidth ">
+						<div class="item">
+							<div class="testimony-slide active text-center">
+								<figure>
+									<img src="//shepay.ayunx.com/template/index/default17/assets/images/person_1.jpg" alt="user">
+								</figure>
+								<span>Jean Doe, 来自 <a href="#" class="人生格言">人生格言</a></span>
+								<blockquote>
+									<p>&ldquo;我们趋行在人生这个亘古的旅途，在坎坷中奔跑，在挫折里涅槃，忧愁缠满全身，痛苦飘洒一地。我们累，却无从止歇；我们苦，却无法回避。&rdquo;</p>
+								</blockquote>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimony-slide active text-center">
+								<figure>
+									<img src="//shepay.ayunx.com/template/index/default17/assets/images/person_2.jpg" alt="user">
+								</figure>
+								<span>John Doe, 来自 <a href="#" class="社会格言">社会格言</a></span>
+								<blockquote>
+									<p>&ldquo;以我的阅历和记忆，民主实现之日并非太平世界，一如革命成功之时，世道尤为难测。我在乎人群的德行，社会的常态，是否失去底线。&rdquo;</p>
+								</blockquote>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimony-slide active text-center">
+								<figure>
+									<img src="//shepay.ayunx.com/template/index/default17/assets/images/person_3.jpg" alt="user">
+								</figure>
+								<span>John Doe, 来自 <a href="#" class="生活格言">生活格言</a></span>
+								<blockquote>
+									<p>&ldquo;生活里不必要渴求别人的理解和认同，因为别人也没有这些义务。静静的过自己的生活，心若不动，风又奈何。你若不伤，岁月无恙。&rdquo;</p>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</div>
+
+	<footer id="gtco-footer" role="contentinfo">
+		<div class="gtco-container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 gtco-widget">
+					<h3><?php echo $conf['web_name']?> - <?php echo $conf['local_domain']?></h3>
+					<p><?php echo $conf['web_name']?>平台,以信誉求市场,以稳定求发展，行业内最安全,简单易用,专业的技术团队,最放心的免签约支付平台。</p>
+					<p><a href="doc.php">了解更多</a></p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="gtco-footer-links">
+						<li><a href="http://auth.ooeecc.cn/" target="_blank">都潮汇系统</a></li>
+						<li><a href="http://auth.ooeecc.cn/" target="_blank">都潮汇系统</a></li>
+						<li><a href="http://auth.ooeecc.cn/" target="_blank">都潮汇系统</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="gtco-footer-links">
+						<li><a href="doc.php">开发文档</a></li>
+						<li><a href="/SDK">在线测试</a></li>
+						<li><a href="/user/agreement.html">服务条款</a></li>
+						<li><a href="http://auth.ooeecc.cn/" target="_blank">模板17自行修改</a></li>
+						<li><a href="http://auth.ooeecc.cn/" target="_blank">模板17自行修改</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="gtco-footer-links">
+						<li><a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes">商务合作</a></li>
+						<li><a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes">友情链接</a></li>
+						<li><a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes">友情链接</a></li>
+						<li><a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes">友情链接</a></li>
+						<li><a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes">友情链接</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12">
+					<p class="pull-left">
+						<small class="block">Copyright &copy; 2016-<?=date('Y')?> <?php echo $conf['web_name']?> - <?php echo $_SERVER['SERVER_NAME']?></small>
+						<small class="block">备案号: <a href="http://www.miibeian.gov.cn/" target="_blank"><?php echo $conf['beian']?></a> 客服QQ: <a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes" target="_blank"><?php echo $conf['web_qq']?></a></small>
+					</p>
+					<p class="pull-right">
+						<ul class="gtco-social-icons pull-right">
+							<li><a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes" target="_blank" title="联系QQ"><i class="icon-qq"></i></a></li>
+							<li><a href="/" target="_blank" title="反馈邮箱"><i class="icon-mail"></i></a></li>
+							<li><a href="/" title="新浪微博"><i class="icon-sina-weibo"></i></a></li>
+							<li><a href="http://auth.ooeecc.cn/" target="_blank" title="都潮汇提供技术服务支持"><i class="icon-onedrive"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	<!-- jQuery -->
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="//shepay.ayunx.com/template/index/default17/assets/js/main.js"></script>
+
+	</body>
+</html>

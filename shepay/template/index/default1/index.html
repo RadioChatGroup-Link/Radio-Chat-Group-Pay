@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-cn">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title><?php echo $conf['web_name']?> - 聚合免签约平台</title>
+    <meta name="language" content="cn"/>
+    <meta name="keywords" content="我们可以助你一站式解决网站签约各种支付接口的难题，现拥有支付宝、财付通、QQ钱包、微信支付等免签约支付功能，并有开发文档与SDK，可快速集成到你的网站"/>
+    <meta name="description" content="我们可以助你一站式解决网站签约各种支付接口的难题，现拥有支付宝、财付通、QQ钱包、微信支付等免签约支付功能，并有开发文档与SDK，可快速集成到你的网站"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default1/css/bootstrap.min.css">
+    <link href="//shepay.ayunx.com/template/index/default1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//shepay.ayunx.com/template/index/default1/css/fontello.css" rel="stylesheet">
+    <link href="//shepay.ayunx.com/template/index/default1/css/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default1/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default1/css/animations.min.css">
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default1/css/style.css">
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default1/css/responsive.css">
+    <link href="//shepay.ayunx.com/template/index/default1/css/toastr.min.css" rel="stylesheet">
+    <link href="//shepay.ayunx.com/template/index/default1/css/kefu.css" rel="stylesheet">
+    <style>
+        a[title="""] {
+            display: none;
+        }
+        .toast-top-center {
+            top: 12px;
+            left: 50%;
+            position: fixed;
+            margin: 0 auto;
+            width: 300px;
+            margin-left: -150px;
+        }
+        @media only screen and (max-width: 1280px) and (min-width: 992px) {
+            header .col-md-2 {
+                position: absolute;
+            }
+            header .col-md-7 {
+                width: 80%;
+            }
+        }
+    </style>
+    <!--[if lt IE 9]-->
+    <script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/html5shiv.js"></script>
+    <script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/selectivizr.js"></script>
+    <!--[endif]-->
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo"><a href=""><img src="<?php echo $conf['logo_url']?>" alt="as""></a></div>
+                </div>
+                <div class="col-md-7">
+                    <ul class="menu">
+                        <li><a href="/">网站首页</a></li>
+                        <li><a href="/doc.php">开发文档</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="button-header">
+                        <a href="/user/login.php" class="custom-btn login">登录</a>
+                        <a href="/user/reg.php" class="custom-btn">注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-block">
+            <div class="logo-mobile"><a href=""><img src="<?php echo $conf['logo_url']?>" alt="as""></a></div>
+            <a href="#" class="mobile-menu-btn"><span></span></a>
+            <div class="mobile-menu">
+                <div class="inside">
+                    <div class="logo">
+                        <a href=""><img src="<?php echo $conf['logo_url']?>" alt="as""></a>
+                    </div>
+                    <ul class="menu panel-group" id="accordion" aria-multiselectable="true">
+                        <li><a href="/">网站首页</a></li>
+                        <li><a href="/doc.php">开发文档</a></li>
+                    </ul>
+                    <div class="button-header">
+                        <a href="/user/login.php" class="custom-btn login">登录</a>
+                        <a href="/user/reg.php" class="custom-btn">注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <style>
+        .modal-content .modal-header {
+            background-color: #0071ff;
+        }
+        .modal-title {
+            margin: 0;
+            line-height: 1.42857143;
+        }
+        .modal-content .modal-title {
+            font-size: 24px;
+            color: #ffffff;
+        }
+        .select {
+            width: 100%;
+            color: #686868;
+        }
+        .btn {
+            padding: 10px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            min-width: 160px;
+            text-align: center;
+            border-radius: 0;
+            text-transform: uppercase;
+            margin: 10px 0;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-default {
+            background-color: #e84c3d;
+            color: #fff !important;
+            border-color: #cd3c2e;
+        }
+        .btn-default {
+            background: linear-gradient(to right, #00b4ff 0, #0071ff 100%);
+            border-color: transparent;
+            border: none;
+        }
+        .section {
+            padding: 25px 0;
+            color: #666666;
+        }
+        .space-bottom {
+            padding-bottom: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #343434;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+        }
+        @media (min-width: 992px) {
+            .title {
+                margin-top: 0;
+            }
+        }
+        .separator {
+            display: block;
+            width: 60px;
+            height: 5px;
+            margin: 15px auto 15px;
+            background-color: #cccccc;
+            position: relative;
+            border: 1px solid #cccccc;
+        }
+        .separator:after {
+            width: 30px;
+            height: 5px;
+            background: #333333;
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            content: "";
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .gray-bg {
+            background-color: #f1f1f1;
+            -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.13) !important;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.13) !important;
+            position: relative;
+        }
+        .gray-bg:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            height: 5px;
+            content: "";
+            width: 100%;
+            -webkit-box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.13);
+            box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.13);
+        }
+        .box-style-1 {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .box-style-1 i {
+            font-size: 90px;
+            margin: 15px 0 5px;
+            text-align: center;
+            line-height: 128px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            margin-top: 20px;
+            color: #343434;
+        }
+        form {
+            margin: 20px 0;
+        }
+    </style>
+    <div class="base-slider owl-carousel owl-theme bg-gray">
+        <div class="item">
+            <img src="//shepay.ayunx.com/template/index/default1/htmlimg/bg-test.png" alt=""">
+            <div class="inside">
+                <h2>首个7X24H自动到账免签系统</h2>
+                <p>妈妈再也不需要担心资金不安全，结算速度慢的问题。</p>
+                <a href="/user/login.php" class="custom-btn">立即登录</a>
+            </div>
+        </div>
+    </div>
+    <section class="bg-gray">
+        <div class="container">
+            <div class="why-choose animatedParent">
+                <h2 class="title-head">全日无人值守 7X24小时高效运转</h2>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 animated bounceInUp delay-250 go">
+                        <div class="inside">
+                            <img src="//shepay.ayunx.com/template/index/default1/htmlimg/optimised.svg" alt=""">
+                            <a href="">极速响应</a>
+                            <p>付款后立即回调，无等待，流程超顺畅</p>
+                            <a href="/user/reg.php" class="read-more">加入我们<img src="//shepay.ayunx.com/template/index/default1/htmlimg/right.png" alt="""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 animated bounceInUp delay-500 go">
+                        <div class="inside">
+                            <img src="//shepay.ayunx.com/template/index/default1/htmlimg/powerfull.svg" alt=""">
+                            <a href="">资金直达</a>
+                            <p>系统收到交易消息后自动将余额结算</p>
+                            <a href="/user/reg.php" class="read-more">加入我们<img src="//shepay.ayunx.com/template/index/default1/htmlimg/right.png" alt="""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 animated bounceInUp delay-750 go">
+                        <div class="inside">
+                            <img src="//shepay.ayunx.com/template/index/default1/htmlimg/website.svg" alt=""">
+                            <a href="">账户安全</a>
+                            <p>绑定后无法更改，防止他人修改结算账户</p>
+                            <a href="/user/reg.php" class="read-more">加入我们<img src="//shepay.ayunx.com/template/index/default1/htmlimg/right.png" alt="""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="copyright text-center">
+                <p>&copy; Copyright 2016-<?=date('Y')?> <?php echo $conf['web_name']?>, All Rights Reserved<br><?php echo $conf['beian']?></p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/jquery.min.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/bootstrap.min.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/modernizr.min.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/owl.carousel.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/jquery.countto.js"></script>
+<script src="//shepay.ayunx.com/template/index/default1/javascript/jquery-parallax.js"></script>
+<script src="//shepay.ayunx.com/template/index/default1/javascript/jquery.validate.js"></script>
+<script src="//shepay.ayunx.com/template/index/default1/javascript/messages_zh.js"></script>
+<script src="//shepay.ayunx.com/template/index/default1/javascript/toastr.min.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/template.js"></script>
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default1/javascript/custom.js"></script>
+<script src="//shepay.ayunx.com/template/index/default1/javascript/owl.carousel.min.js"></script>
+<script src="//shepay.ayunx.com/template/index/default1/javascript/css3-animate-it.js"></script>
+<script src="//shepay.ayunx.com/template/index/default1/javascript/counter.js"></script>
+<script src="//shepay.ayunx.com/template/index/default1/javascript/main.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("header").addClass('transparent');
+    });
+</script>
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+</body>
+</html>

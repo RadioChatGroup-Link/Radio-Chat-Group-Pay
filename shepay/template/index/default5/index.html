@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title><?php echo $conf['web_name']?> - 一站式免签约支付方案</title>
+<meta name="keywords" content="<?php echo $conf['web_name']?>,都潮汇,支付宝免签约即时到账,财付通免签约,微信免签约支付,QQ钱包免签约,免签约支付,深海网络科技有限公司"/>
+<meta name="description" content="<?php echo $conf['web_name']?>是深海网络科技有限公司旗下的免签约支付产品，可以助你一站式解决网站签约各种支付接口的难题，现拥有支付宝、财付通、QQ钱包、微信支付等免签约支付功能，并有开发文档与SDK，可快速集成到你的网站"/>
+<meta name="viewport"content="user-scalable=no, width=device-width">
+<meta name="viewport"content="width=device-width, initial-scale=1"/>
+<meta name="renderer"content="webkit">
+<link rel="stylesheet"href="//shepay.ayunx.com/template/index/default5/css/font-awesome.min.css"type="text/css"/>
+<link rel="stylesheet"href="//shepay.ayunx.com/template/index/default5/css/bootstrap.css"type="text/css"/>
+<link rel="stylesheet"href="//shepay.ayunx.com/template/index/default5/css/common.css">
+<link rel="stylesheet"href="//shepay.ayunx.com/template/index/default5/css/index-top.css">
+<!--[if IE 9 ]><style type="text/css">#ie9{ display:block; }</style><![endif]-->
+<script src="//shepay.ayunx.com/template/index/default5/js/jquery.min.js"></script>
+<script src="//shepay.ayunx.com/template/index/default5/js/bootstrap.js"></script>
+<script src="//shepay.ayunx.com/template/index/default5/js/jquery-ujs.js"async="true"></script>
+<link rel="stylesheet"type="text/css"href="//shepay.ayunx.com/template/index/default5/css/index.css"/>
+</head>
+<body>
+<!--[if (gt IE 6)&(lt IE 9)]>
+<h1 style='color:red;text-align:center;'>
+      你好，浏览器版本过低，升级可正常访问,点击<a style="color:blue"href="http://browsehappy.com/">升级您的浏览器</a>
+</h1>
+<style type="text/css">#ielt9{ display: none; }h1{ height:300px;line-height: 300px;display:block; }header{ display: none; }#ie9{ display: block; }.tenxcloud-logo{ margin:50px auto 0;display:block}</style>
+<![endif]--><link rel="stylesheet"href="//shepay.ayunx.com/template/index/default5/css/common1.css"/>
+<script type="text/javascript">
+
+function aclos(){
+document.getElementById("q_Msgbox").style.display="none";
+}
+</script>
+
+
+<div id="ielt9"style="height:100%">
+<header>
+<nav id="main-nav"class="navbar navbar-default"role="navigation">
+<div class="container">
+<div class="row">
+<div class="navbar-header">
+<button type="button"class="toggle navbar-toggle collapsed"data-toggle="collapse"data-target=".navbar-top-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/"><span class="logo" style="background:url(<?php echo $conf['logo_url']?>) no-repeat;height: 45px"></span></a>
+</div>
+<div class="navbar-collapse navbar-top-collapse collapse"style="height: 1px;">
+<ul class="nav navbar-nav navbar-right c_navbar">
+
+</ul>
+<ul class="nav navbar-nav navbar-right z_navbar">
+<li><a href="/">首页</a></li>
+<li><a href="doc.php">开发文档</a></li>
+<li class="dropdown"><a class="dropdown-toggle"data-toggle="dropdown" href="/user/">用户中心<b class="caret"></b></a>
+<ul  class="dropdown-menu"style="width: 100%;">
+<li><a style="line-height:30px;" href="/user/login.php">登陆</a></li>
+<li><a style="line-height:30px;" href="/user/reg.php">注册</a></li>
+</ul>
+
+</li>
+                    
+                </ul>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div id="ie9">你当前的浏览器版本过低，请您升级至IE9以上版本，以达到最佳效果，谢谢！<span class="closeIE">X</span></div>
+<div id="scroll_Top">
+<i class="fa fa-arrow-up"></i>
+<a href="javascript:;"title="去顶部"class="TopTop">TOP</a></div>
+<script>
+
+  $('.closeIE').click(function(event) {
+    $('#ie9').fadeOut();
+  });
+</script>
+
+
+<section class="screen1">
+<div id="myCarousel"class="carousel slide">
+<div class="carousel-inner">
+
+<div class="item active">
+<div class="banner2 banner3">
+<div class="container">
+<div class="row">
+
+<div class="col-xs-12 col-sm-6 col-md-6">
+<div class="ban2_img">
+<div class="cloud_db_img"><img src="//shepay.ayunx.com/template/index/default5/images/banner4.png"class="img-responsive"></div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6">
+<div class="ban2_text">
+<div class="ban2_status docker">
+<div class="ban2_middle">欢迎使用<?php echo $conf['web_name']?></div>
+<div class="ban2_content">提供免签约支付宝、QQ钱包、微信支付</div>
+                      
+                        <div class="ban2_experience">
+<a href="doc.php"class="btn proceed">查看开发文档</a><br/>
+                      <a href="/SDK/" class="btn">在线测试</a>
+                      </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<!--   <ol class="carousel-indicators">
+<li data-target="#myCarousel"data-slide-to="1"class="active"></li>
+</ol>
+<div id="trun_left"><a href="#myCarousel"data-slide="prev"class="_left">&lsaquo;</a></div>
+<div id="trun_right"><a href="#myCarousel"data-slide="next"class="_right">&rsaquo;</a></div>-->
+</div>
+
+</section>
+   
+   <section class="screen3">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 cloud_server">
+<div class="h3"><?php echo $conf['web_name']?>®免签约支付产品</div>
+</div>
+<div class="col-xs-6 col-sm-4 col-md-4">
+<div id="container_server">
+<div class="server_item container_server"></div>
+<div class="server-head h4">多种支付方式
+<div class="h5 text-center">支持财付通 支付宝 微信 QQ钱包</div>
+</div>
+</div>
+</div>
+<div class="col-xs-6 col-sm-4 col-md-4">
+<div id="server-arrange">
+<div class="server_item arrange"></div>
+<div class="server-head h4">对接费率超低
+<div class="h5 text-center">每笔交易手续费低至2%，比其它平台更便宜</div>
+</div>
+</div>
+</div>
+<div class="col-xs-6 col-sm-4 col-md-4">
+<div id="codebuild">
+<div class="server_item codebuild"></div>
+<div class="server-head h4">无需自主结算
+<div class="h5 text-center">满一定金额即可自动结算到你的支付宝账号</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+  
+    <section class="screen4">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 blog-head">
+<div class="h3">我们的客户</div>
+<div class="col-xs-6 col-sm-4 col-md-4">
+<img src="//shepay.ayunx.com/template/index/default5/images/wjob.png">
+</div>
+<div class="col-xs-6 col-sm-4 col-md-4">
+<img src="//shepay.ayunx.com/template/index/default5/images/521dg.png">
+</div>
+<div class="col-xs-6 col-sm-4 col-md-4">
+<img src="//shepay.ayunx.com/template/index/default5/images/mzb.png">
+</div>
+</div>
+          
+          
+        </div>
+</div>
+</section>
+
+<div class="address">
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-8 col-lg-9">
+<ul class="porduct">
+<h4>合作伙伴</h4>
+<li><a href="/"><?php echo $conf['web_name']?></a></li>
+<li><a href="/"><?php echo $conf['web_name']?></a></li>
+</ul>
+<ul class="price">
+<h4>关于我们</h4>
+<li><?php echo $conf['web_name']?>是深海网络科技有限公司旗下的免签约支付产品</li>
+</ul>
+<ul class="about"style="width: 40%;padding-left: 22px;">
+<h4>联系我们</h4>
+<li><strong>QQ:</strong><a target="_blank"href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']?>&site=qq&menu=yes">点我联系</a></li>
+<li><strong>Email:</strong><a name="baidusnap4"></a><a href="mailto:<?php echo $conf['web_mail']?>"><?php echo $conf['web_mail']?></a></li>
+</ul>
+</div>
+
+</div>
+<div class="xinxi">
+<p>Copyright © 2016-<?=date('Y')?> <?php echo $conf['web_name']?>  | <?php echo $conf['beian']?></p>
+</div>
+<script type="text/javascript">
+        if('ontouchend' in document.body && $(window).width() < 996){
+          $('.col-xs-12 .h2').css('text-align','center');
+        }
+      </script>
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+</div>
+</footer>
+</div>
+</div>
+</body>
+</html> 

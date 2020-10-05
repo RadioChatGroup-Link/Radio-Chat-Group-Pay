@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="renderer" content="webkit">
+    <!-- 目前仅限360急速浏览 webkit:急速  ie-comp:ie兼容模式   ie-stand: ie标准模式 -->
+    <title><?php echo $conf['web_name']?>  -  聚合支付系统，第四方免签约支付平台，一站式免签约支付方案。</title>
+    <meta name="keywords" content="<?php echo $conf['web_name']?>,支付宝免签约即时到账,财付通免签约,微信免签约支付,QQ钱包免签约,免签约支付,">
+    <meta name="description" content="<?php echo $conf['web_name']?>是深海网络科技有限公司旗下的免签约支付产品，可以助你一站式解决网站签约各种支付接口的难题，现拥有支付宝、财付通、QQ钱包、微信支付等免签约支付功能，并有开发文档与SDK，可快速集成到你的网站">
+    <!-- Bootstrap中文字体版 -->
+    <link href="//shepay.ayunx.com/template/index/default4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定义样式 -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href="//shepay.ayunx.com/template/index/default4/css/common.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//shepay.ayunx.com/template/index/default4/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//shepay.ayunx.com/template/index/default4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div style="height:40px; width:100%; background:#fff4e1; color:#ff4e1f; text-align:center; font-size:16px; line-height:40px;top:0;"><img style="margin-right:10px;" src="//shepay.ayunx.com/template/index/default4/images/notice_ico.png" >声明 ：近日有不法分子仿用我司网站开展不正当业务，我司郑重声明：<?php echo $conf['local_domain']?>(<?php echo $conf['web_name']?>)为我司唯一官网.除此之外网站均为假冒！请各位商户认准我司平台网址，谨防上当受骗！</div>
+ 
+
+<!-- <!-- 整站通用的头部及导航条 -->
+<div id="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="padding:0 0 0 15px;" href="/"><img alt="Brand" style="max-width:130px;"
+                                                                                  src="<?php echo $conf['logo_url']?>"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                    <li  class="active"><a href="#">首页 <span class="sr-only">(current)</span></a><p class="line-top hidden-xs"></p></li>
+                                        <li ><a href="/doc.php">API文档</a><li>
+										<li ><a href="/SDK/">在线测试</a></li>
+                                        <li ><a href="/user/reg.php">用户注册</a></li>
+                                        <li ><a href="/user/">商户登录</a></li>
+                                    </ul>
+                            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</div>
+<!-- <!-- 整站通用的头部及导航条 -->
+
+<!-- 全屏轮播图 -->
+<div id="carousel-example-generic" class="carousel slide my-slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    </ol>
+      
+   <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a target="_blank" href="#">
+                <img src="//shepay.ayunx.com/template/index/default4/images/03.jpg" alt="<?php echo $conf['web_name']?>">
+            </a>
+        </div>
+        <div class="item">
+            <a target="_blank" href="#">
+                <img src="//shepay.ayunx.com/template/index/default4/images/banner2.png" alt="<?php echo $conf['web_name']?>">
+            </a>
+        </div>
+    </div>
+</div>
+<div style="text-align:center;color:red;font-size:20px">通告：请各位商户珍惜自己的接口API，请勿用于博彩，黄色，腾讯cdk等违规商品，一经发现。封闭接口</div>         
+  
+<!-- 全屏轮播图 -->
+<!-- 我们的成绩 -->
+<div class="index-row our-data">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 main-title">
+                <h2 class="h1">我们的成绩</h2>
+
+                <p class="line line-big"></p>
+
+                <h2>
+                    <small>2018年1月1日至2018年12月30日，我们的接待数据。</small>
+                </h2>
+            </div>
+            <div class="col-sm-3 our-data-item sum-apply">
+                <div class="number-wrapper">
+                    <span id="sum-apply" class="run-number" data-to="240">98,517</span>
+                </div>
+                <h4 class="title">累计交易</h4>
+            </div>
+            <div class="col-sm-3 our-data-item sum-rate">
+                <div class="number-wrapper">
+                    <span id="sum-rate" class="run-number" data-to="240">99.1</span>%
+                </div>
+                <h4 class="title">客户好评</h4>
+            </div>
+            <div class="col-sm-3 our-data-item sum-urgent">
+                <div class="number-wrapper">
+                    <span id="sum-urgent" class="run-number" data-to="240">20,368</span>
+                </div>
+                <h4 class="title">接口使用次数</h4>
+            </div>
+            <div class="col-sm-3 our-data-item urgent-rate">
+                <div class="number-wrapper">
+                    <span id="urgent-rate" class="run-number" data-to="240">100</span>%
+                </div>
+                <h4 class="title">支付成功率</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 我们的成绩 -->
+<!-- 我们的优势 -->
+<div class="index-row our-whyus">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 main-title">
+                <h2 class="h1">我们的优势</h2>
+
+                <p class="line line-big"></p>
+
+                <h2>
+                    <small>提供全平台的支付支持，用户可以在任何平台上使用易支付，方便快捷收钱！</small>
+                </h2>
+            </div>
+            <div class="col-sm-3">
+                <div class="our-whyus-item">
+                   <h3 class="title">支付</h3>
+<p>免签约、免企业支付宝、免手续费，直接收款到您自己的支付宝，不中转资金。</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="our-whyus-item">
+                   <h3 class="title">接口</h3>
+<p>丰富的支付接口，目前已支持支付宝及微信支付方式！后续其它接口陆续上线！</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="our-whyus-item">
+                   <h3 class="title">高效率即时响应</h3>
+<p>遇到任何疑问，您都会在第一时间得到我们的正面回应，并进行相关处理。</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="our-whyus-item">
+                   <h3 class="title">安全保障</h3>
+<p>24小时监视订单，和资金安全，确保接口效率，集群DDos防御部署，网站安全无忧</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 我们的优势 -->
+<!-- 我们的服务 -->
+<div class="index-row our-service">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 main-title">
+                <h2 class="h1">我们的服务</h2>
+
+                <p class="line line-big"></p>
+
+                <h2>
+                    <small>24小时全自动人工分析捕获用户订单并提交给回调接口，响应时间仅仅只需1秒！</small>
+                </h2>
+            </div>
+            <div class="col-sm-12 text-center card-box">
+                <ul class="card-area">
+                    <li class="card-item card-active">
+                        <div class="card-title">
+                            <h4>PHP接口对接服务</h4>
+
+                            <p>￥200.00</p>
+
+                        </div>
+                        <div class="card-content">
+                           <p><strong>24*7</strong>  免费售后服务</p>
+
+                            <p><strong>5分钟</strong> 快速对接</p>
+
+                            <p>接口包安全稳定</p>
+
+                            <p>支持SSL安全协议</p>
+
+                            <p>支付宝及微信收款免费使用</p>
+                            <a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']; ?>&site=qq&menu=yes" class="btn btn-outline-inverse">立即咨询</a>
+
+                        </div>
+                    </li>
+                    <li class="card-item">
+                        <div class="card-title">
+                            <h4>游戏充值对接服务</h4>
+
+                            <p>￥398.00</p>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>24*7</strong>  免费售后服务</p>
+
+                            <p><strong>30分钟</strong> 快速对接</p>
+
+                            <p>接口包安全稳定</p>
+
+                            <p>支持SSL安全协议</p>
+		
+							<p>支付宝及微信收款免费使用</p>
+                             <a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']; ?>&site=qq&menu=yes" class="btn btn-outline-inverse">立即咨询</a>
+                        </div>
+                    </li>
+                    <li class="card-item">
+                        <div class="card-title">
+                            <h4>APP接口对接服务</h4>
+
+                            <p>￥500</p>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>24*7</strong> 免费售后服务</p>
+
+                             <p><strong>60分钟</strong> 快速对接</p>
+
+                            <p>接口包安全稳定</p>
+
+                            <p>支持SSL安全协议</p>
+		
+							<p>支付宝及微信收款免费使用</p>
+                             <a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']; ?>&site=qq&menu=yes" class="btn btn-outline-inverse">立即咨询</a>
+                        </div>
+                    </li>
+                    <li class="card-item">
+                        <div class="card-title">
+                            <h4>合作加盟</h4>
+
+                            <p>￥99999</p>
+                        </div>
+                        <div class="card-content">
+                           <p><strong>24*7</strong>  免费售后服务</p>
+
+                            <p>提供开发文档说明</p>
+
+                            <p>提供PHP成品SDK实例</p>
+
+                            <p>提供7*12小时技术指导使用</p>
+		
+							<p>支付宝及微信收款免费使用</p>
+                             <a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']; ?>&site=qq&menu=yes" class="btn btn-outline-inverse">立即咨询</a>
+                        </div>
+                    </li>
+                </ul>
+		</div>
+    </div>
+</div>
+<!-- 我们的服务 -->
+<!-- 接入流程< -->
+<div class="index-row our-example">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 main-title">
+                <h2 class="h1">多种方式及通道以供用户使用</h2>
+
+                <p class="line line-big"></p>
+
+                
+                    <small><h2>接入流程</h2></small>
+				
+				<br/><h3 class="title">注册账户->商务审核->获取接口->集成调试->小额测试->发布上线</h3>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- 接入流程< -->
+
+
+
+<!-- 数字滚动插件 -->
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default4/js/countup.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        /**通用-banner大图自定义缩放**/
+        var zoomWidth = 992; //缩放阀值992px, 即所有小于992px的视口都会对原图进行缩放, 只是缩放比例不同
+        var maxWidth = 1920; //最大宽度1920px
+        var ratio = 1; //缩放比例
+        var viewWidth = window.innerWidth; // 视口宽度
+        var zoomSlider = function () {
+            if (viewWidth < 768) { //当视口小于768时(移动端), 按992比例缩放
+                ratio = viewWidth / zoomWidth; //视口宽度除以阀值, 计算缩放比例
+            } else if (viewWidth < zoomWidth) { //当视口界于768与992之间时, bootstrap主宽度为750, 这区间图片缩放比例固定.
+                ratio = zoomWidth / (zoomWidth + (zoomWidth - 750));
+            } else { // PC端不缩放
+                ratio = 1;
+            }
+            //ratio = viewWidth / zoomWidth; //视口宽度除以阀值, 计算缩放比例
+            //ratio = (ratio<=1) ? ratio : 1; //如果比例值大于1, 说明视口宽度高于阀值, 则不进行任何缩放
+            var width = maxWidth * ratio; //缩放宽度
+            $(".my-slide img").each(function () {
+                $(this).css({
+                    "width": width,
+                    "max-width": width,
+                    "margin-left": -(width - viewWidth) / 2
+                }); //图片自适应居中, 图片宽度与视口宽度差除以2的值, 设置为负margin
+            });
+        }
+        /**通用-我们的成绩等数字滚动特效**/
+        var numOptions = {
+            useEasing: true,
+            useGrouping: true,
+            separator: ',',
+            decimal: '.',
+            prefix: '',
+            suffix: ''
+        }
+        var numGroup = new Array(
+                new CountUp("sum-apply", 0, 18397, 0, 2.5, numOptions),
+                new CountUp("sum-rate", 0, 98.8, 1, 2.5, numOptions),
+                new CountUp("sum-urgent", 0, 3273, 0, 2.5, numOptions),
+                new CountUp("urgent-rate", 0, 100, 0, 2.5, numOptions)
+        );
+        var runNumber = function () {
+            $('.run-number').each(function () {
+                var oTop = $(this).offset().top;
+                var sTop = $(window).scrollTop();
+                var oHeight = $(this).height();
+                var oIndex = $(this).index('.run-number');
+                //console.log(oTop+'\r\n'+sTop+'\r\n'+oHeight+'\r\n'+$(window).height());
+                if (oTop >= sTop && (oTop + (oHeight / 2)) < (sTop + $(window).height())) {
+                    numGroup[oIndex].start();
+                    //console.log('元素'+$(this).index('.run-number')+'可见');
+                } else {
+                    //console.log('元素'+$(this).index('.run-number')+'不可见');
+                }
+            });
+        }
+
+        zoomSlider(); //页面加载时初始化并检查一次.
+        runNumber(); //页面加载时判断一次
+        /**视口发生变化时的事件**/
+        $(window).resize(function () {
+            viewWidth = window.innerWidth; // 重置视口宽度
+            zoomSlider();//判断是否绽放banner
+            runNumber();//判断是否执行动画
+        });
+        /**滚动事件**/
+        $(window).scroll(function () {
+            runNumber();
+        });
+
+        //首页-我们的服务
+        $('.card-item').each(function () {
+            $(this).mouseover(function () {
+                $(this).addClass('card-active');
+                $(this).siblings().removeClass('card-active');
+                $(this).find(".btn").addClass('btn-outline-inverse').removeClass('btn-outline-blue');
+                $(this).siblings().find(".btn").addClass('btn-outline-blue').removeClass('btn-outline-inverse');
+            });
+        });
+
+    });
+</script>
+
+
+<div id="sidebar-bg" style="display: none;"></div>
+<!-- 立即咨询 -->
+<div class="contact-banner">
+    <canvas id="waves" class="waves"></canvas>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 contact-banner-box">
+                <h2 class="h1">更多疑问 全面解答</h2>
+                <h4>在线为您解答所有疑惑</h4>
+                <a href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']; ?>&site=qq&menu=yes" class="btn btn-outline-inverse">免费咨询</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 立即咨询 -->
+<!-- 通用页脚 -->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+<br/>
+<br/>
+
+<div align="center">
+    <p><span style="margin-top:5px; display:inline-block"> <font color="#FFffff">2016-<?=date('Y')?> &copy; <?php echo $conf['web_name']?>为各大网站站长提供支付解决方案，资金实时到账！无须人工介入，抛弃传统结算等流程！方便快捷安全！<script src="//shepay.ayunx.com/template/index/default4/js/z_stat.php" language="JavaScript"></script><br>
+   <p><font color="#FF0000">工业和信息化部备案号：<a href="http://www.miitbeian.gov.cn/" target="_blank" class="pgy"><?php echo $conf['beian']?></a>
+<br/>
+    <span style="color: whitesmoke;">服务支持:</span> | 	<a href="http://auth.ooeecc.cn/" target="_blank">都潮汇系统</a> 	| 	<a href="https://www.ayun,host/" target="_blank">时间云</a></span> 
+<!-- 通用页脚 -->
+<!-- 手机端底部 -->
+<div id="mob-bottom" class="visible-xs-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 mob-bottom-item">
+                <a href="tel:更改模板4">
+                    <img class="img-responsive center-block" src="//shepay.ayunx.com/template/index/default4/images/mob-footer-phone.png">
+                    <span>电话咨询</span>
+                </a>
+            </div>
+            <div class="col-xs-3 mob-bottom-item">
+                <a href="tel:更改模板4">
+                    <img class="img-responsive center-block" src="//shepay.ayunx.com/template/index/default4/images/mob-footer-mob.png">
+                    <span>紧急电话</span>
+                </a>
+            </div>
+            <div class="col-xs-3 mob-bottom-item">
+                <a href="QQ:更改模板4">
+                    <img class="img-responsive center-block web-chat" src="//shepay.ayunx.com/template/index/default4/images/mob-footer-chat.png">
+                    <span>在线咨询</span>
+                </a>
+            </div>
+            <div class="col-xs-3 mob-bottom-item">
+                <a href="sms:更改模板4">
+                    <img class="img-responsive center-block" src="//shepay.ayunx.com/template/index/default4/images/mob-footer-msm.png">
+                    <span>短信咨询</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 手机端底部 -->
+<!-- 整站通用的尾部 -->
+<script type="text/javascript" src="//shepay.ayunx.com/template/index/default4/js/common.js"></script>
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+</body>
+</html>

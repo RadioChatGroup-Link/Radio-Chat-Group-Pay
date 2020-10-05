@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<title><?php echo $conf['web_name']?> - 会支付会生活</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default9/css/main.css"/>
+	</head>
+	<body onselectstart="return false" oncontextmenu=self.event.returnValue=false>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+
+							<span class="icon fa-diamond"><font size="8">易</font></span>						</div>
+						<div class="content">
+							<div class="inner">
+								<h1><?php echo $conf['web_name']?></h1>
+								<p><?php echo $_SERVER['SERVER_NAME']?></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="/user/" target="_blank">用户中心</a></li>
+								<li><a href="/user/reg.php" target="_blank">商户注册</a></li>
+								<li><a href="/doc.php" target="_blank">开发文档</a></li>
+								<li><a href="/SDK/" target="_blank">在线测试</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">备案号: <a href="http://www.miitbeian.gov.cn/"><?php echo $conf['beian']; ?></a></p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="//shepay.ayunx.com/template/index/default9/js/jquery.min.js" ></script>
+			<script src="//shepay.ayunx.com/template/index/default9/js/skel.min.js" ></script>
+			<script src="//shepay.ayunx.com/template/index/default9/js/util.js" ></script>
+			<script src="//shepay.ayunx.com/template/index/default9/js/main.js" ></script>
+			<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+	</body>
+</html>

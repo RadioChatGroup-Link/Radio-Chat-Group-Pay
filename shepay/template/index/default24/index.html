@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo $conf['web_name']; ?></title>
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default24/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="//shepay.ayunx.com/template/index/default24/css/index.css">
+    <!--[if lt IE 9]>
+	<script src="https://juhecdn.oss-cn-hangzhou.aliyuncs.com/common/html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <a class="newlogo" href="/" target="_blank"><img style="width:100px;height:45px" src="<?php echo $conf['logo_url']?>" /> </a>
+            </div>
+            <div class="menu">
+                <ul class="clearfix">
+                    <li class="active"><a href="/">首页</a></li>
+                    <li><a href="/SDK/">在线测试</a></li>
+                    <li><a href="/doc.php">开发文档</a></li>
+                </ul>
+            </div>
+            <div class="info">
+                <ul class="clearfix">
+                    <li class="account"><a href="/user/" target="_blank">商户中心</a></li>
+                    <li class="account"><a href="/user/reg.php" target="_blank">商户注册</a></li>
+                    <li class="split">|</li>
+                    <li class="contact">
+                        <span class="img"></span>
+                        <a href="<?php echo $conf['jlqlj']; ?>">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="slideBox">
+            <div class="hd">
+                <ul>
+                    <!-- <li>1</li>
+                    <li>2</li> -->
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li style="background:url(//shepay.ayunx.com/template/index/default24/images/banner.jpg) center center no-repeat;">
+                    </li>
+                </ul>
+            </div>
+            <a class="prev" href="javascript:void(0)" target="_self">
+                <span></span>
+            </a>
+            <a class="next" href="javascript:void(0)" target="_self">
+                <span></span>
+            </a>
+        </div>
+    </header>
+    <section class="main">
+        <div class="charge-item clearfix">
+            <div class="item bill first">
+                <div class="icon"></div>
+                <h3>微信支付</h3>
+                <p>微信扫码支付</p>
+                <p>微信H5</p>
+                <p>微信公众号支付</p>
+                <a class="detail" href="#" target="_blank">查看详情</a>
+            </div>
+            <div class="item flow">
+                <div class="icon"></div>
+                <h3>支付宝</h3>
+                <p>支付宝扫码</p>
+                <p>支付宝H5</p>
+                <a class="detail" href="#" target="_blank">查看详情</a>
+            </div>
+            <div class="item oil">
+                <div class="icon"></div>
+                <h3>QQ钱包</h3>
+                <p>QQ钱包扫码</p>
+                <p>QQ钱包手机支付</p>
+                <p>QQ钱包H5</p>
+                <a class="detail" href="#" target="_blank">查看详情</a>
+            </div>
+            <div class="item gift">
+                <div class="icon"></div>
+                <h3>银联快捷</h3>
+                <p>银联快捷支付</p>
+                <p>大额支付</p>
+                <p>代扣代付</p>
+                <a class="detail" href="#" target="_blank">查看详情</a>
+            </div>
+            <div class="item game">
+                <div class="icon"></div>
+                <h3>其他支付接口</h3>
+                <p>京东支付</p>
+                <p>百度钱包支付</p>
+                <p>云闪付</p>
+                <a class="detail" href="#" target="_blank">查看详情</a>
+            </div>
+        </div>
+        <div class="process">
+            <h2>合作流程</h2>
+            <ul class="clearfix">
+                <li>
+                    <div class="process1"></div>
+                    <h3>账号开通</h3>
+                    <p>注册账户，并且完成相关支付接口申请</p>
+                </li>
+                <li>
+                    <div class="process2"></div>
+                    <h3>接口开发</h3>
+                    <p>合作伙伴依据协议进行接口开发</p>
+                </li>
+                <li>
+                    <div class="process3"></div>
+                    <h3>系统调试</h3>
+                    <p>合作伙伴通过测试环境进行系统调试</p>
+                </li>
+                <li>
+                    <div class="process4"></div>
+                    <h3>上线运营</h3>
+                    <p>合作伙伴部署上线，正式使用手机充值业务</p>
+                </li>
+            </ul>
+            <span class="arrow1"></span>
+            <span class="arrow2"></span>
+            <span class="arrow3"></span>
+        </div>
+        <div class="service">
+            <h2>他们正在使用我们的服务</h2>
+            <div class="service-slide">
+                <ul class="service-ul clearfix">
+                    <li class="jd"></li>
+                    <li class="jdf"></li>
+                    <li class="tc"></li>
+                    <li class="wechat"></li>
+                    <li class="tmall"></li>
+                    <li class="pa"></li>
+                </ul>
+                <!--                 <a class="prev" href="javascript:void(0)">&lsaquo;</a>
+                <a class="next" href="javascript:void(0)">&rsaquo;</a> -->
+            </div>
+        </div>
+    </section>
+    <footer class="width100">
+        <div class="width1200 clearfix">
+            <dl>
+                <dt>
+                    关于我们
+                </dt>
+                <dd>
+                    <a href="/SDK/" target="_blank">
+                        在线测试
+                    </a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    商户中心
+                </dt>
+                <dd>
+                    <a href="/user/" target="_blank">
+                        商户中心
+                    </a>
+                </dd>
+                <dd>
+                    <a href="/user/login.php" target="_blank">
+                        商户登录
+                    </a>
+                </dd>
+                <dd>
+                    <a href="/user/reg.php" target="_blank">
+                        商户注册
+                    </a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    服务&支持
+                </dt>
+                <dd>
+                    <a href="/doc.php" target="_blank">
+                        开发文档
+                    </a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    联系我们
+                </dt>
+                <dd>联系QQ： <?php echo $conf['web_qq']; ?></dd>
+                <dd><?php echo $conf['web_mail']; ?></dd>
+            </dl>
+        </div>
+        <p>
+            Copyright © <?php echo $conf['web_name']; ?>, All Rights Reserved.
+            <span style="margin-left: 15px;text-align: center">
+                <a style="display:inline-block;text-decoration:none;height:16px;line-height:30px;margin-top: 15px">
+                    <img src="//shepay.ayunx.com/template/index/default24/images/bei2.png" style="float:left;" />
+                </a>
+            </span>
+            <span>
+                <a style="display:inline-block;text-decoration:none;height:16px;line-height:30px;margin-top: 15px">
+                    <img src="//shepay.ayunx.com/template/index/default24/images/bei1.png" style="float:left;" />
+                </a>
+            </span>
+            <?php echo $conf['web_name']; ?> | <?php echo $conf['beian']; ?>
+        </p>
+    </footer>
+    <script src="//shepay.ayunx.com/template/index/default24/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//shepay.ayunx.com/template/index/default24/js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(".slideBox").slide({
+        mainCell: ".bd ul",
+        titCell: '.hd li',
+        effect: "fold",
+        autoPlay: true,
+        interTime: 5000,
+        delayTime: 500,
+        trigger: "click"
+    });
+    $(".slideBox").hover(function() {
+        if($(".bd ul li").length > 1){
+            $(this).find(".prev,.next").stop(true, true).fadeIn();
+        }
+    }, function() {
+        $(this).find(".prev,.next").fadeOut();
+    });
+    $(".service-slide").slide({
+        mainCell: ".service-ul",
+        effect: "left",
+        vis: 6,
+        scroll: 1,
+        autoPlay: false,
+        autoPage: true,
+        pnLoop: true,
+        delayTime: 500,
+        trigger: "click"
+    });
+    </script>
+</body>
+
+</html>

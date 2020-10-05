@@ -1,0 +1,537 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title><?php echo $conf['web_name']?> - 专业的聚合支付技术服务商</title>
+<meta name="renderer" content="webkit">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content="MetInfo 5.3.19"  data-variable="/,cn,10001,,10001,shengbaili" />
+<meta name="description" content="<?php echo $conf['web_name']?>服务于互联网和移动互联网领域，为网页游戏、手机游戏、阅读、音乐、视频、交友、教育等移动应用提供聚合支付技术服务！开发者仅需几行简单代码,就能接入主流支付服务商,轻松实现收款！帮助开发者快速集成到自己相应产品，效率高，见效快，费率低" />
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta name="Keywords" content="<?php echo $conf['web_name']?>,都潮汇,个人支付宝即时到账接口,支付宝即时到账免签接口,支付宝即时到账接口免签,微信免签接口,微信免签即时到账接口,支付宝分润接口,支付宝免签分润接口,支付宝分润平台源码,企业支付宝分润平台,DZ论坛程序支付宝即时到账插件,ECSHOP即时到账接口" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default6/css/reset.css">
+<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default6/css/jquery.fancybox.css">
+<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default6/css/home.css">
+<link rel="stylesheet" href="//shepay.ayunx.com/template/index/default6/css/sweetalert.css" type='text/css' />
+<script>(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?0a4d714863293391b69e651eb888a752":"https://jspassport.ssl.qhimg.com/11.0.1.js?0a4d714863293391b69e651eb888a752";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script><script type="text/javascript">  
+        function checkMobile() {  
+            var pda_user_agent_list = new Array("2.0 MMP", "240320", "AvantGo", "BlackBerry", "Blazer",  
+                    "Cellphone", "Danger", "DoCoMo", "Elaine/3.0", "EudoraWeb", "hiptop", "IEMobile", "KYOCERA/WX310K", "LG/U990",  
+                    "MIDP-2.0", "MMEF20", "MOT-V", "NetFront", "Newt", "Nintendo Wii", "Nitro", "Nokia",  
+                    "Opera Mini", "Opera Mobi",  
+                    "Palm", "Playstation Portable", "portalmmm", "Proxinet", "ProxiNet",  
+                    "SHARP-TQ-GX10", "Small", "SonyEricsson", "Symbian OS", "SymbianOS", "TS21i-10", "UP.Browser", "UP.Link",  
+                    "Windows CE", "WinWAP", "Android", "iPhone", "iPod", "iPad", "Windows Phone", "HTC"/*, "GTB"*/);  
+            var pda_app_name_list = new Array("Microsoft Pocket Internet Explorer");  
+            var user_agent = navigator.userAgent.toString();  
+            for (var i = 0; i < pda_user_agent_list.length; i++) {  
+                if (user_agent.indexOf(pda_user_agent_list[i]) >= 0) {  
+                    window.location.href = "/";  
+                }  
+            }  
+            var appName = navigator.appName.toString();  
+            for (var i = 0; i < pda_app_name_list.length; i++) {  
+                
+    </script>  
+</head>
+<body onload="checkMobile();">
+<!--[if (gt IE 6)&(lt IE 9)]>
+<h1 style='color:red;text-align:center;'>
+      你好，浏览器版本过低，升级可正常访问,点击<a style="color:blue"href="http://browsehappy.com/">升级您的浏览器</a>
+</h1>
+<style type="text/css">#ielt9{ display: none; }h1{ height:300px;line-height: 300px;display:block; }header{ display: none; }#ie9{ display: block; }.tenxcloud-logo{ margin:50px auto 0;display:block}</style>
+<![endif]--><link rel="stylesheet"href="//shepay.ayunx.com/template/index/default6/css/common1.css"/>
+<div id="intro">
+<ul id="scene" data-friction-x="0.15" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="10" data-limit-y="10" data-mode="cursor">
+<li class="wave_1  layer" data-depth="0.40">
+<div class="wave_wrap"><img src="//shepay.ayunx.com/template/index/default6/images/wave-1.png" /></div>
+</li>
+<li class="wave_2  layer" data-depth="0.27">
+<div class="wave_wrap"><img src="//shepay.ayunx.com/template/index/default6/images/wave-2.png" /></div>
+</li>
+<li class="cloud_1 layer" data-depth="0.30">
+<div class="wave_wrap"><img src="//shepay.ayunx.com/template/index/default6/images/cloud1.png" /></div>
+</li>
+<li class="cloud_2 layer" data-depth="0.20">
+<div class="wave_wrap"><img src="//shepay.ayunx.com/template/index/default6/images/cloud2.png" /></div>
+</li>
+<li class="slogan  layer" data-depth="0.60">
+<div class="wave_wrap"><img src="//shepay.ayunx.com/template/index/default6/images/slogan.png" /></div>
+</li>
+<li class="floater layer" data-depth="0.60">
+<div class="wave_wrap"><img src="//shepay.ayunx.com/template/index/default6/images/floater.png" /></div>
+</li>
+<li class="wave_3  layer" data-depth="0.15" style="margin-top:10px;">
+<div class="wave_wrap"><img src="//shepay.ayunx.com/template/index/default6/images/wave-3.png" /></div>
+</li>
+</ul>
+
+<div class="arrow"><i class="arrow_1"></i><i class="arrow_2"></i><i class="arrow_3"></i><i class="arrow_4"></i></div>
+</div>
+
+<div class="case" id="case">
+<div class="wrap">
+<div class="caseDisplay">
+<div class="cscd cd1" style="display: block">
+<ul class="u1">
+<li><p>支付宝、微信、银联等多渠道 </p></li>
+<li><p>免费接入</p></li>
+<li><p>支持企业及个人开发者 </p></li>
+<li><p>聚合报表</p></li>
+</ul>
+<ul class="u2">
+<li><p>7*24小时技术支持 </p></li>
+<li><p>30分钟快速审核 </p></li>
+<li><p>支持iOS、Android和HTML5</p></li>
+</ul>
+<img src="//shepay.ayunx.com/template/index/default6/images/case1.jpg" alt="移动聚合支付">
+</div>
+<div class="cd2">
+<ul class="u1">
+<li><p>支付宝、微信、银联等多渠道 </p></li>
+<li><p>免费接入</p></li>
+ <li><p>支持企业及个人开发者 </p></li>
+<li><p>聚合报表</p></li>
+</ul>
+<ul class="u2">
+<li><p>7*24小时技术支持 </p></li>
+<li><p>30分钟快速审核 </p></li>
+<li><p>支持iOS、Android和HTML5</p></li>
+</ul>
+<img src="//shepay.ayunx.com/template/index/default6/images/case2.jpg" alt="PC聚合支付">
+</div>
+<div class="cscd cd3">
+<ul class="u1">
+<li><p>支付宝、微信、银联等多渠道 </p></li>
+<li><p>免费接入</p></li>
+<li><p>支持企业及个人开发者 </p></li>
+<li><p>聚合报表</p></li>
+</ul>
+<ul class="u2">
+<li><p>7*24小时技术支持 </p></li>
+<li><p>30分钟快速审核 </p></li>
+<li><p>支持iOS、Android和HTML5</p></li>
+</ul>
+<img src="//shepay.ayunx.com/template/index/default6/images/case3.jpg" alt="线下扫码支付">
+</div>
+</div>
+<div class="tyArrow">
+<a href="/index/user.html" title="进入用户中心" class="fancybox-bak" id="fancybox-manual-a">进入用户中心 <img class="arwimg" src="//shepay.ayunx.com/template/index/default6/images/tyarrow.png" width="15" height="13" alt="进入用户中心"></a>
+</div>
+<div class="caseTabs">
+<a class="active" href="javascript:;">移动聚合支付</a>
+<a href="javascript:;">PC聚合支付</a>
+<a href="javascript:;">线下扫码支付</a>
+</div>
+</div>
+</div>
+
+<div id="who_2" class="inview">
+<div class="wrap">
+<div class="parallax">
+<ul id="scene2">
+<li><img src="//shepay.ayunx.com/template/index/default6/images/v1.png" /></li>
+<li><img src="//shepay.ayunx.com/template/index/default6/images/v2.png" /></li>
+<li><img src="//shepay.ayunx.com/template/index/default6/images/v3.png" /></li>
+<li><img src="//shepay.ayunx.com/template/index/default6/images/v4.png" /></li>
+<li><img src="//shepay.ayunx.com/template/index/default6/images/v5.png" /></li>
+<li><img src="//shepay.ayunx.com/template/index/default6/images/v6.png" /></li>
+<li><img src="//shepay.ayunx.com/template/index/default6/images/v7.png" /></li>
+</ul>
+</div>
+<div class="content">
+<h4><?php echo $conf['web_name']?></h4>
+<h5>为您考虑更多的支付聚合平台</h5>
+<p class="pdes">
+智云支付是集网银支付、快捷支付、支付宝支付、微信支付、手Q支付于一体的线上、线下支付接口聚合平台。
+</p>
+</div>
+</div>
+</div>
+
+<div class="wrap clearfix" id="channels">
+<div class="title clearfix">
+<div>
+<h2>以新媒体为平台</h2>
+<p><?php echo $conf['web_name']?>支持微信支付、支付宝、手Q支付等多种支付方式，</p>
+<p>适应不同顾客群体的支付需求，商家无需准备多种收款设备，</p>
+<p>免去人工找零烦恼，提高结账效率，并有效预防假币。</p>
+</div>
+</div>
+<div class="content clearfix">
+<div class="media_list">
+<ul>
+<li style="top: 75px;  left: 220px; "><img src="//shepay.ayunx.com/template/index/default6/images/otherpay.png"></li>
+<li style="top: 137px; left: 247px; "><img src="//shepay.ayunx.com/template/index/default6/images/fengqipay.png"></li>
+<li style="top: 150px; left: 897px; "><img src="//shepay.ayunx.com/template/index/default6/images/tokyopay.png"></li>
+<li style="top: 79px;  left: 625px; "><img src="//shepay.ayunx.com/template/index/default6/images/jdxpay.png"></li>
+<li style="top: 115px; left: 758px; "><img src="//shepay.ayunx.com/template/index/default6/images/cashpay.png"></li>
+<li style="top: 123px; left: 388px; "><img src="//shepay.ayunx.com/template/index/default6/images/unionpay.png"></li>
+<li style="top: 322px; left: 737px; "><img src="//shepay.ayunx.com/template/index/default6/images/huapay.png"></li>
+<li style="top: 202px; left: 507px; "><img src="//shepay.ayunx.com/template/index/default6/images/applepay.png"></li>
+<li style="top: 93px;  left: 512px; "><img src="//shepay.ayunx.com/template/index/default6/images/dianpingpay.png"></li>
+<li style="top: 150px; left: 651px; "><img src="//shepay.ayunx.com/template/index/default6/images/meituanpay.png"></li>
+<li style="top: 130px; left: 75px; "><img src="//shepay.ayunx.com/template/index/default6/images/jdpay.png"></li>
+<li style="top: 375px; left: 315px;"><img src="//shepay.ayunx.com/template/index/default6/images/icopay.png"></li>
+<li style="top: 267px; left: 125px; "><img src="//shepay.ayunx.com/template/index/default6/images/ppay.png"></li>
+<li style="top: 270px; left: 632px; "><img src="//shepay.ayunx.com/template/index/default6/images/alipay.png"></li>
+<li style="top: 247px; left: 219px; "><img src="//shepay.ayunx.com/template/index/default6/images/visapay.png"></li>
+<li style="top: 221px; left: 734px; "><img src="//shepay.ayunx.com/template/index/default6/images/ccpay.png"></li>
+<li style="top: 242px; left: 349px; "><img src="//shepay.ayunx.com/template/index/default6/images/bdpay.png"></li>
+<li style="top: 310px; left: 469px; "><img src="//shepay.ayunx.com/template/index/default6/images/wechart.png"></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="solution" class="solution">
+<div class="page_title">
+<h4>满足你不同场合的收单需求</h4>
+<h5>全支付场景覆盖</h5>
+</div>
+<div id="solution_more" class="solution_more">
+<div class="solution_line">
+<div class="solution_line_l"></div>
+<b></b>
+</div>
+<div class="wrap">
+<div class="solution_tab">
+<ul>
+<li><span class="icon icon1"></span><span class="pway">移动支付</span></li>
+<li><span class="icon icon2"></span><span class="pway">PC支付</span></li>
+<li><span class="icon icon3"></span><span class="pway">扫码支付</span></li>
+<li><span class="icon icon4"></span><span class="pway">极速代付</span></li>
+<li><span class="icon icon5"></span><span class="pway">自助续费</span></li>
+</ul>
+</div>
+<div class="solution_ct">
+<ul>
+<li class="show">
+<p>iOS／Android</p>
+<p>HTML5／微信公众号</p>
+</li>
+<li class="">
+<div class="icon icon1"></div>
+<p>PC网页</p>
+<p>多渠道支付</p>
+</li>
+<li class="">
+<div class="icon icon1"></div>
+<p>主动／被动扫码支付</p>
+<p>支持支付宝、微信</p>
+</li>
+<li class="">
+<div class="icon icon1"></div>
+<p>操作便捷、到账快速</p>
+<p>解决各类代付问题</p>
+</li>
+<li class="">
+<div class="icon icon1"></div>
+<p>会员与企业良性互动</p>
+<p>自动扣费 及时服务</p>
+</li>
+</ul>
+</div>
+<div class="solution_btn">
+<p>
+<a href="solution.html" target="_blank">了解更多</a>
+<img src="//shepay.ayunx.com/template/index/default6/images/right-arrow.png" width="20" height="17" alt="了解更多">
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="character clearfix" id="character">
+<div class="w1024">
+<ul>
+<li>
+<a href="javascript:;" class="item"><span class="icon icon1"></span></a>
+<p class="phead"><strong>接入便捷</strong></p>
+<p class="pbody">时间与人力最优化投入，</p>
+<p class="pbody">满足不同需求。</p>
+</li>
+<li>
+<a href="javascript:;" class="item"><span class="icon icon2"></span></a>
+<p class="phead"><strong>通道灵活</strong></p>
+<p class="pbody">支付通道丰富，</p>
+<p class="pbody">选择灵活。</p>
+</li>
+<li>
+<a href="javascript:;" class="item"><span class="icon icon3"></span></a>
+<p class="phead"><strong>系统稳定</strong></p>
+<p class="pbody">跨节点容灾环网，</p>
+<p class="pbody">不担心秒杀、丢单。</p>
+</li>
+<li>
+<a href="javascript:;" class="item"><span class="icon icon4"></span></a>
+<p class="phead"><strong>资金安全</strong></p>
+<p class="pbody">自主研发平台，</p>
+<p class="pbody">符合金融安全标准。</p>
+</li>
+<li>
+<a href="javascript:;" class="item"><span class="icon icon5"></span></a>
+<p class="phead"><strong>不介入资金流</strong></p>
+<p class="pbody">智云支付只负责交易处理，</p>
+<p class="pbody">不参与资金清算。</p>
+</li>
+<li>
+<a href="javascript:;" class="item"><span class="icon icon6"></span></a>
+<p class="phead"><strong>开放创新</strong></p>
+<p class="pbody">博采众长，优势互补，</p>
+<p class="pbody">不为短板所限制。</p>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="achievements clearfix" id="achievements">
+
+<div class="achievements_bg"></div>
+<div class="w1024 clearfix">
+<div class="page_title">
+<h4>尝试开启更多可能<br>让每一秒都带来无限灵感</h4>
+</div>
+<div class="wrap">
+<div class="aripple" style="top: 130px; left: 60px; ">
+<div class="ripple_bg">
+<div class="ripple1">
+<img src="//shepay.ayunx.com/template/index/default6/images/ripple1.png">
+</div>
+<div class="ripple2">
+<img src="//shepay.ayunx.com/template/index/default6/images/ripple2.png">
+</div>
+</div>
+<div class="ripple_f">
+<div class="ripple_p">
+<div class="ripple_w">
+<h3><span>1</span>名</h3>
+<h4>程序员</h4>
+</div>
+</div>
+<div class="ripple_i"></div>
+</div>
+</div>
+<div class="aripple" style="top: -40px; left: 180px; ">
+<div class="ripple_bg">
+<div class="ripple1">
+<img src="//shepay.ayunx.com/template/index/default6/images/ripple1.png">
+</div>
+<div class="ripple2">
+<img src="//shepay.ayunx.com/template/index/default6/images/ripple2.png">
+</div>
+</div>
+<div class="ripple_f">
+<div class="ripple_p">
+<div class="ripple_w">
+<h3><span>10</span></h3>
+<h4>分钟调试</h4>
+</div>
+</div>
+<div class="ripple_i"></div>
+</div>
+</div>
+<div class="aripple" style="top: 0px; left: 690px; ">
+<div class="ripple_bg">
+<div class="ripple1">
+<img src="//shepay.ayunx.com/template/index/default6/images/ripple1.png">
+</div>
+<div class="ripple2">
+<img src="//shepay.ayunx.com/template/index/default6/images/ripple2.png">
+</div>
+</div>
+<div class="ripple_f" style="top:0px;">
+<div class="ripple_p" style="margin-bottom:10px;">
+<div class="ripple_w">
+<h3><span>1</span>次</h3>
+<h4>接入</h4>
+</div>
+</div>
+<div class="ripple_i scale7"></div>
+</div>
+</div>
+
+<div class="circle " data-d="90">
+<canvas width="270" height="270" id="canvas"></canvas>
+
+</div>
+
+<div class="aripple" style="top: 150px; left: 810px; ">
+<div class="ripple_bg">
+<div class="ripple1">
+<img src="//shepay.ayunx.com/template/index/default6/images/ripple1.png">
+</div>
+<div class="ripple2">
+<img src="//shepay.ayunx.com/template/index/default6/images/ripple2.png">
+</div>
+</div>
+<div class="ripple_f">
+<div class="ripple_p">
+<div class="ripple_w">
+<h3><span>35</span>种</h3>
+<h4>支付渠道</h4>
+</div>
+</div>
+<div class="ripple_i"></div>
+</div>
+</div>
+
+<div class="achievements_slogan">
+<h3>给整个开发进度节约了90%的开发时间</h3>
+</div>
+</div>
+</div>
+</div>
+
+<div id="ability">
+<div id="who_1">
+<div class="wrap">
+<div class="title">
+<div class="clearfix">
+<h2>追梦无限</h2>
+<p class="clearfix">
+<?php echo $conf['web_name']?>不断融合新科技、新技术，从支付方式、渠道、场景都对现有的支付做出了大量新的想法和可能，<br>提升用户支付的能力和范围，将为我们未来的生活带来极大的便利。
+</p>
+</div>
+</div>
+<div class="who1_content">
+<div class="who1_showcase">
+<article id="who1_driven" class="show">
+<div class="who1_driven_bg">
+<div class="who1_driven_bg_d who1_driven_bg_tl"></div>
+<div class="who1_driven_bg_d who1_driven_bg_tcl"></div>
+<div class="who1_driven_bg_d who1_driven_bg_bl"></div>
+<div class="who1_driven_bg_d who1_driven_bg_bcl"></div>
+<div class="who1_driven_bg_d who1_driven_bg_tr"></div>
+<div class="who1_driven_bg_d who1_driven_bg_tcr"></div>
+<div class="who1_driven_bg_d who1_driven_bg_br"></div>
+<div class="who1_driven_bg_d who1_driven_bg_bcr"></div>
+</div>
+<div class="who1_driven_point who1_driven_point_tl">
+<div class="who1_driven_pointer"></div>
+<div class="who1_driven_t2">流水信息保真，微金融风控及信贷审核极大降低作假风险。</div>
+</div>
+<div class="who1_driven_point who1_driven_point_tr">
+<div class="who1_driven_pointer"></div>
+<div class="who1_driven_t2">互联网数据获取为信贷商户节省账单获取时间，极大提高效率。</div>
+</div>
+<div class="who1_driven_point who1_driven_point_bl">
+<div class="who1_driven_pointer"></div>
+</div>
+<div class="who1_driven_point who1_driven_point_br">
+<div class="who1_driven_pointer"></div>
+</div>
+<div class="who1_driven_cl who1_driven_cn">聚合支付平台支撑服务</div>
+<div class="who1_driven_cr who1_driven_cn">聚合支付平台衍生服务</div>
+<div class="rotate">
+<div class="rotate_circle">
+<div class="rotate_back"></div>
+<div class="rotate_front">
+<div class="rotate_front_i">
+<div class="rotate_front_i1 rotate_front_id" style="visibility: visible;"><span>微信</span></div>
+<div class="rotate_front_i2 rotate_front_id" style="visibility: visible;"><span>网站</span></div>
+<div class="rotate_front_i3 rotate_front_id" style="visibility: visible;"><span>线下扫码</span></div>
+<div class="rotate_front_i4 rotate_front_id" style="visibility: visible;"><span>移动支付</span></div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="partner " id="partner">
+<div class="page_title" style="padding-top:72px;"><h4>合作伙伴</h4></div>
+<div class="wrap inview">
+<div class="partner_list">
+<ul class="show clearfix">
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt1.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt2.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt3.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt4.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt5.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt6.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt7.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt8.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt9.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt10.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt11.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt12.png"></a></li>
+<li><a><img src="//shepay.ayunx.com/template/index/default6/images/pt13.png"></a></li>
+</ul>
+</div>
+<div class="partner_cl"><i class="partner_prev"></i><i class="partner_next"></i></div>
+</div>
+</div>
+
+<div class="advisory active">
+<ul class="contact">
+<li class="first">
+<a href="<?php echo $conf['web_qq']?>"><i class="qq"></i>QQ</a>
+<div class="adct ct_1">
+<div class="cwrap">
+<p><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $conf['web_qq']; ?>&site=qq&menu=yes"><i class="qq"></i>咨询 QQ</a></p>
+</div>
+</div>
+</li>
+<li>
+<a href="<?php echo $conf['web_qq']?>"><i class="wechat"></i>微信</a>
+<div class="adct ct_2">
+<div class="cwrap">
+<img src="//shepay.ayunx.com/template/index/default6/images/syxxlz.jpg" width="84" height="84" alt="微信">
+<p>微信</p>
+</div>
+</div>
+</li>
+<li>
+<a href="<?php echo $conf['phone']?>"><i class="phone"></i>电话</a>
+<div class="adct ct_3">
+<div class="cwrap">
+<p title="<?php echo $conf['phone']; ?>"><i class="phone"></i><?php echo $conf['phone']; ?></p>
+</div>
+</div>
+</li>
+<li class="last"><a href="javascript:;" class="btopBtn"><i class="btop"></i></a></li>
+</ul>
+
+</div><div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 65px;height: 65px;z-index: 99;">
+    <a href="#" target="_blank"><img  src="//shepay.ayunx.com/template/index/default6/images/myssl-id.png" alt="" style="width:100%;height:100%"></a>
+</div>
+<script src="//shepay.ayunx.com/template/index/default6/js/jquery-1.8.2.min.js"></script>
+<script src="//shepay.ayunx.com/template/index/default6/js/common.js"></script>
+<script src="//shepay.ayunx.com/template/index/default6/js/jquery.parallax.min.js"></script>
+<script src="//shepay.ayunx.com/template/index/default6/js/jquery.fancybox.js"></script>
+<script src="//shepay.ayunx.com/template/index/default6/js/prefixfree.min.js"></script>
+<script src="//shepay.ayunx.com/template/index/default6/js/jquery.waypoints.js"></script>
+<script src="//shepay.ayunx.com/template/index/default6/js/home.js"></script>
+<script src="//shepay.ayunx.com/template/index/default6/js/sweetalert.min.js"></script>
+<script type="text/javascript"  src="//shepay.ayunx.com/template/index/default6/js/su.js"></script>
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', <?php echo $conf['kfset_mqid']?>);
+</script>
+</body>
+</html>

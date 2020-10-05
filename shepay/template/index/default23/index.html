@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><?php echo $conf['web_name']; ?>-个人收款即时支付接口,免签约代支付</title>
+    <meta name="description" content="真正的微信、支付宝、QQ个人版即时到账支付接口，无需结算，即时到账，100%资金安全，99.9%成功率，低费率，无需人工操作，是个人收款的最佳解决方案，同时集成码支付,易支付,代收款。" />
+    <meta name="keywords" content="微信支付,QQ支付、支付宝,个人收款,即时到帐,免签约,免结算,零风险,码支付,易支付,代收款" />
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="applicable-device" content="pc,mobile">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Web Fonts -->
+    <!-- Bootstrap core CSS -->
+    <link href="//shepay.ayunx.com/template/index/default23/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="//shepay.ayunx.com/template/index/default23/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Fontello CSS -->
+    <link href="//shepay.ayunx.com/template/index/default23/css/fontello.css" rel="stylesheet">
+    <link href="//shepay.ayunx.com/template/index/default23/css/iconfont.css" rel="stylesheet">
+    <link href="//shepay.ayunx.com/template/index/default23/css/settings.css" media="screen" rel="stylesheet">
+    <link href="//shepay.ayunx.com/template/index/default23/css/animations.css" rel="stylesheet">
+    <link href="//shepay.ayunx.com/template/index/default23/css/style.css" rel="stylesheet">
+    <!-- Color Scheme (In order to change the color scheme, replace the red.css with the color scheme that you prefer)-->
+    <link href="//shepay.ayunx.com/template/index/default23/css/green.css" rel="stylesheet">
+    <!-- Custom css -->
+    <link href="//shepay.ayunx.com/template/index/default23/css/custom.css" rel="stylesheet">
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <script type='text/javascript' src='//shepay.ayunx.com/template/index/default23/js/jquery.js'></script>
+    <script type='text/javascript' src='//shepay.ayunx.com/template/index/default23/js/jquery-migrate.min.js'></script>
+</head>
+
+<body class="front">
+    <!-- scrollToTop -->
+    <!-- ================ -->
+    <div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+    <!-- page wrapper start -->
+    <!-- ================ -->
+    <div class="page-wrapper">
+        <!-- header start (remove fixed class from header in order to disable fixed navigation mode) -->
+        <!-- ================ -->
+        <header class="header fixed clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- header-left start -->
+                        <!-- ================ -->
+                        <div class="header-left clearfix">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="/"><img id="logo" src="<?php echo $conf['logo_url']?>" alt="<?php echo $conf['web_name']; ?>"></a>
+                            </div>
+                            <!-- name-and-slogan -->
+                        </div>
+                        <!-- header-left end -->
+                    </div>
+                    <div class="col-md-9">
+                        <!-- header-right start -->
+                        <!-- ================ -->
+                        <div class="header-right clearfix">
+                            <!-- main-navigation start -->
+                            <!-- ================ -->
+                            <div class="main-navigation animated">
+                                <!-- navbar start -->
+                                <!-- ================ -->
+                                <nav class="navbar navbar-default" role="navigation">
+                                    <div class="container-fluid">
+                                        <!-- Toggle get grouped for better mobile display -->
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                        <!-- Collect the nav links, forms, and other content for toggling -->
+                                        <div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+                                            <ul class="nav navbar-nav navbar-right">
+                                                <li class="active"><a href="#">首页</a></li>
+                                                <li class=""><a href="/SDK/">在线测试</a></li>
+                                                <li class=""><a href="/doc.php">开发文档</a></li>
+                                                <li><a href="/user/" class=" btn-default loginbtn">用户中心</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <!-- navbar end -->
+                            </div>
+                            <!-- main-navigation end -->
+                        </div>
+                        <!-- header-right end -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+        <!-- main start -->
+        <!-- page-top start-->
+        <!-- ================ -->
+        <div class="page-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="call-to-action">
+                            <h1 class="title"><i class="fa fa-bolt"></i><?php echo $conf['web_name']; ?></h1>
+                            <p>只需个人账户即可开通收款三种收款，无需成为商家。 </p>
+                            <a class="btn btn-white more" data-toggle="modal" data-target="#myModal">
+                                <i class="pl-10 fa fa-info"></i> 详细说明
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">为什么无需签约支付宝、微信支付、QQ支付？</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>支付宝和微信目前都不支持个人接入即时到账收款接口，必须要营业执照成为商户才能使用。现在，使用我们的接口，您只需支付宝、微信个人账户，就可以完成即时到账收款接口，实现个人网站收款。</p>
+                                            <ul class="list-icons">
+                                                <li><i class="fa fa-check"></i> 需要1台安卓手机，无需Root权限，安装我们的APP，付款人不需要装App。</li>
+                                                <li><i class="fa fa-check"></i> 确保您资金账户安全,无需在我们APP中登录支付宝、微信，只要您手机里安装了支付宝、微信APP即可。</li>
+                                                <li><i class="fa fa-check"></i> 支付流程顺畅,网速正常情况，从用户付款到您后台收到收款通知.</li>
+                                                <li><i class="fa fa-check"></i> 个人码支付支付成功率高达99.99%,安卓、二维码助手、PC软件配套使用.</li>
+                                                <li><i class="fa fa-check"></i> 另外也支持代收款服务,费率较高,产业监管限制严</li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">我明白了</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            或
+                            <a href="/index.php/Zhifu/Index/reg.html" class="btn btn-default" target="_blank"><i class="pl-10 fa fa-user"></i> 免费注册</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page-top end -->
+        <!-- section start -->
+        <!-- ================ -->
+        <div class="section clearfix">
+            <div class="container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="mq-wraper">
+                                <img alt="" src="//shepay.ayunx.com/template/index/default23/images/yh.png" style="position: relative;left:-30px;">
+                                <h2 class="title">集成码支付、易支付平台</h2>
+                                <div class="mq-content">
+                                    <ul class="list-icons">
+                                        <li>平台码支付只需个人账户即可收款，任何人均可开通。</li>
+                                        <li>资金直接到个人账号，不经过第三方，支付、收款更快捷，资金安全有保障。</li>
+                                        <li>平台易支付产业严格限制，需审核开通</li>
+                                        <li>易支付还支持自建支付网站,接入云平台,安全可靠</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="mq-image">
+                                <img alt="" src="//shepay.ayunx.com/template/index/default23/images/b1.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section end -->
+        <!-- section start -->
+        <!-- ================ -->
+        <div class="section page-scene page-gray ">
+            <div class="container">
+                <div class="call-to-action">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="space-bottom"></div>
+                            <h2 class="text-center title">支持全业务场景</h2>
+                            <div class="separator"></div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="text-center">
+                                        <img alt="" src="//shepay.ayunx.com/template/index/default23/images/img1.png">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <img alt="" src="//shepay.ayunx.com/template/index/default23/images/yh.png" style="position: relative;left:-30px;">
+                                    <p>提供支付接入方案，可在各种场景中流畅交易，让您在各个场景下轻松实现收款。</p>
+                                    <p>涵盖手机APP、移动网页、PC网页、微信公众号、手机扫码等场景，立即体验吧！</p>
+                                    <p>同时还能拥有我们这样的平台,网站接入您自己的支付平台(易支付)</p>
+                                    <p>码支付请自己控制好产业范围,我们不加以限制！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section end -->
+        <footer id="footer">
+            <!-- .footer start -->
+            <!-- ================ -->
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-content">
+                                <div class="logo-footer"><img id="logo-footer" src="<?php echo $conf['web_name']; ?>" alt="<?php echo $conf['web_name']; ?>"></div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p>真正的微信、支付宝、QQ个人版即时到账支付接口，无需结算，即时到账，100%资金安全，99.9%成功率，低费率，无需人工操作，是个人收款的最佳解决方案，同时集成码支付,易支付,代收款</p>
+                                    </div>
+                                    <div class="col-sm-6 contactlist">
+                                        <!--class="list-icons">
+												<li><i class="fa fa-qq pr-10"></i> 7019732</li>
+                                                <li><i class="fa fa-qq pr-10"></i> 1148226743</li>
+												<li><i class="fa fa-envelope-o pr-10"></i> admin@mzhipay.com</li>
+											</ul-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-bottom hidden-lg hidden-xs"></div>
+                        <div class="col-sm-6 col-md-2">
+                            <div class="footer-content">
+                                <h2>友情链接</h2>
+                                <nav>
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li><a target="_blank" href="/"><?php echo $conf['web_name']; ?></a></li>
+                                        <li class="active"><a target="_blank" href="/"><?php echo $conf['web_name']; ?></a></li>
+                                        <li class="active"><a target="_blank" href="/"><?php echo $conf['web_name']; ?></a></li>
+                                        <li class="active"><a target="_blank" href="/"><?php echo $conf['web_name']; ?></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-md-offset-1">
+                            <div class="footer-content">
+                                <h2>支持平台</h2>
+                                <div class="gallery row">
+                                    <div class="gallery-item col-xs-4">
+                                        <div class="overlay-container">
+                                            <img src="//shepay.ayunx.com/template/index/default23/images/partner_alipay.jpg" alt="">
+                                            <a href="https://www.alipay.com" class="overlay small">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item col-xs-4">
+                                        <div class="overlay-container">
+                                            <img src="//shepay.ayunx.com/template/index/default23/images/partner_wxpay.jpg" alt="">
+                                            <a href="https://pay.weixin.qq.com/" class="overlay small">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item col-xs-4">
+                                        <div class="overlay-container">
+                                            <img src="//shepay.ayunx.com/template/index/default23/images/partner_tencentcloud.jpg" alt="">
+                                            <a href="https://cloud.tencent.com" class="overlay small">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item col-xs-4">
+                                        <div class="overlay-container">
+                                            <img src="//shepay.ayunx.com/template/index/default23/images/partner_aliyun.jpg" alt="">
+                                            <a href="https://www.aliyun.com" class="overlay small">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item col-xs-4">
+                                        <div class="overlay-container">
+                                            <img src="//shepay.ayunx.com/template/index/default23/images/partner_baiduai.jpg" alt="">
+                                            <a href="http://ai.baidu.com/" class="overlay small">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item col-xs-4">
+                                        <div class="overlay-container">
+                                            <img src="//shepay.ayunx.com/template/index/default23/images/wordpress.jpg" alt="">
+                                            <a href="https://www.wordpress.org/" class="overlay small">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item col-xs-4">
+                                        <div class="overlay-container">
+                                            <img src="//shepay.ayunx.com/template/index/default23/images/magento.jpg" alt="">
+                                            <a href="http://www.magento.com/" class="overlay small">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item col-xs-4">
+                                        <div class="overlay-container">
+                                            <img src="//shepay.ayunx.com/template/index/default23/images/opencart.jpg" alt="">
+                                            <a href="http://www.opencart.com/" class="overlay small">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item col-xs-4">
+                                        <div class="overlay-container">
+                                            <img src="//shepay.ayunx.com/template/index/default23/images/shopify.jpg" alt="">
+                                            <a href="http://auth.ooeecc.cn" class="overlay small">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-bottom hidden-lg hidden-xs"></div>
+                </div>
+            </div>
+            <!-- .footer end -->
+            <!-- .subfooter start -->
+            <!-- ================ -->
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Copyright &copy; 2016-2019 <?php echo $conf['web_name']; ?>
+                                | <a href="http://www.miitbeian.gov.cn" target="_blank"><?php echo $conf['beian']; ?></a></p>
+                        </div>
+                        <div class="col-md-6">
+                            <nav class="navbar navbar-default" role="navigation">
+                                <!-- Toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/SDK/">在线测试</a></li>
+                                        <li><a href="/doc.php">开发文档</a></li>
+                                        <li><a href="/user/">用户中心</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- .subfooter end -->
+        </footer>
+    </div>
+    <!-- 客服 -->
+    <style>
+        /* 客服 */
+.contact {
+	top: 200px;
+	z-index: 10;
+	padding-bottom: 10px;
+	width: 120px;
+	background-color: #fff;
+	box-shadow: 0 0 4px rgba(0,0,0,.2);
+	position: fixed;
+}
+.contact.left-contact {
+	left: -1px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.contact.right-contact {
+	right: -1px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.contact-pic {
+	width: 60px;
+	height: 60px;
+	margin-top: -32px;
+	border: 2px solid #ff4e54;
+	border-radius: 50%;
+	display: block;
+	    margin-left: auto;
+    margin-right: auto;
+}
+.contact-time {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #aaa;
+}
+.contact-list{margin:0;padding: 0}
+.contact-list > li {
+	margin-bottom: 10px;
+	text-align: center;
+	list-style: none;
+	margin-left: 0;
+}
+.contact-list > li > a {
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	background-color: #ff4e54;
+	border-radius: 2px;
+}
+.contact-list > li > a > img {
+	position: relative;
+	top: 3px;
+	display: inline-block;
+	width: 13px;
+	margin-right:5px;
+}
+.contact-wechat {
+	width: 120px;
+	height: 120px;
+}
+.wechat-text {
+	font-size: 12px;
+	color: #aaa;
+	margin-bottom: 5px;
+}
+		</style>
+    <!-- page-wrapper end -->
+    <script type="text/javascript">
+    window.$ = jQuery;
+    </script>
+    <!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+    <!-- Jquery and Bootstap core js files -->
+    <script type="text/javascript" src="//shepay.ayunx.com/template/index/default23/js/bootstrap.min.js"></script>
+    <!-- Modernizr javascript -->
+    <script type="text/javascript" src="//shepay.ayunx.com/template/index/default23/js/modernizr.min.js"></script>
+    <script src="//shepay.ayunx.com/template/index/default23/js/jquery-parallax.js"></script>
+    <script type="text/javascript" src="//shepay.ayunx.com/template/index/default23/js/jquery.appear.js"></script>
+    <!-- Initialization of Plugins -->
+    <script type="text/javascript" src="//shepay.ayunx.com/template/index/default23/js/template.js"></script>
+    <!--This page loaded in 0.020 seconds with 3 database queries.-->
+</body>
+
+</html>
